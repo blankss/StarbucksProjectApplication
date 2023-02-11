@@ -11,4 +11,4 @@ build:
 	mvn package
 
 run-jar:
-	java -jar target/$(jar)
+	java -jar target/spring-mvc-1.0.jar
