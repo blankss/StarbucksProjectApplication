@@ -14,12 +14,11 @@ public class FieldLevelGetterSetterDemo {
     @Getter
     private int userAge;
     
-    public FieldLevelGetterSetterDemo(int userAge){
+    public FieldLevelGetterSetterDemo(int userAge) {
       this.userAge=userAge;
     }
 
-    public static void print()
-	{
+    public static void print() {
 		System.out.println( "\n\n***** FieldLevelGetterSetterDemo Bytecode Dump *****" ) ;
 		FieldLevelGetterSetterDemo m = new FieldLevelGetterSetterDemo(10) ;
 		Class gmClass = m.getClass() ;
@@ -46,8 +45,7 @@ public class FieldLevelGetterSetterDemo {
 
         System.out.println( "\nMETHODS:" ) ;
         Method gmMethods[] = gmClass.getMethods() ;
-        for ( int i=0; i <gmMethods.length; i++ )
-        {
+        for ( int i=0; i <gmMethods.length; i++ ) {
             Method theMethod = gmMethods[i] ;
             String method = theMethod.toString() ;
             System.out.format( "  %s\n", method ) ;

@@ -28,12 +28,11 @@ public class ValAndVarUserDemo {
       return money;
     }
 
-    public static void print()
-	{
+    public static void print() {
         System.out.println( "\n\n*** ValAndVarUserDemo ***\n") ;
         ValAndVarUserDemo obj = new ValAndVarUserDemo() ;
         System.out.println( "valCheck = " + obj.valCheck() ) ;   
         System.out.println( "varCheck = " + obj.varCheck() ) ;   
-	}
+	  }
 
   }

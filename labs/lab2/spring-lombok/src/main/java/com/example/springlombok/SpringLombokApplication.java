@@ -17,12 +17,12 @@ public class SpringLombokApplication {
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 
-		ValAndVarUserDemo.print() ;
-		//FieldLevelGetterSetterDemo.print() ;
-		//GetterSetterUserDemo.print() ;
-		//ConstructorUserDemo.print() ;
-		//DataUserDemo.print() ;
-		//NonNullUserDemo.print() ;
+		ValAndVarUserDemo.print();
+		//FieldLevelGetterSetterDemo.print();
+		//GetterSetterUserDemo.print();
+		//ConstructorUserDemo.print();
+		//DataUserDemo.print();
+		//NonNullUserDemo.print();
 
 		return String.format("Hello %s!", name);
 	}
