@@ -5,10 +5,10 @@
 
 ## Spring Lombok
 ### ValAndVarUserDemo
-a. The Lombok Annonation or Feature being tested <br/>
-  The feature being tested for ValAndVarUserDemo.java would be lombok.val, which has the functionality of declaring a local variable without specifying the type of the   variable. EX: var money and var userName are not specified to a type in the code. <br />
-b. How does the Output verify your understanding of the Feature being tested?
-  When the code was ran, we could see that the variable userName is of type String and the variable money is of type BigDecimal. This makes sense as money is set to a   BigDecimal type of 53.00 and later 80.00 and userName is set to a String type of "Hello World". By running this piece of code, the feature is shown to work as even     though the code does not specify the type of the variable, lombok.val infers the type from the intializer expression. <br />
+**a.** The Lombok Annonation or Feature being tested <br/>
+  The feature being tested for ValAndVarUserDemo.java would be lombok.val, which has the functionality of declaring a local variable without specifying the type of the   variable. EX: var money and var userName are not specified to a type in the code. <br /><br />
+**b.** How does the Output verify your understanding of the Feature being tested? <br />
+  When the code was ran, we could see that the variable userName is of type String and the variable money is of type BigDecimal. This makes sense as money is set to a   BigDecimal type of 53.00 and later 80.00 and userName is set to a String type of "Hello World". By running this piece of code, the feature is shown to work as even     though the code does not specify the type of the variable, lombok.val infers the type from the intializer expression. <br /> <br />
 <img width="1440" alt="Screen Shot 2023-02-11 at 1 22 35 PM" src="https://user-images.githubusercontent.com/72158949/218282585-b020de13-a6ba-4550-bb08-3ea83f1cd8cc.png">
 
 ### GetterSetterUserDemo
