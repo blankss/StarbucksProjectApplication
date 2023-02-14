@@ -31,6 +31,8 @@ The Lombok feature being tested in this demeonstration would be the generation o
 **b.** How does the Output verify your understanding of the Feature being tested? <br />
 Although _getMethods()_ does not explicitly return the constructor of our class, we can easily verify our understanding of how @AllArgsConstructor and @NoArgsConstructor work by either attempting to instantiate our object with the instance variables, or we can call _getConstructors()_ in addition to _getMethods()_ to get both the methods and constructors that the class contains. _getConstructors()_ is also an available method in java.lang.reflect.*;.<br /> <br />
 <img width="1440" alt="Screen Shot 2023-02-12 at 1 36 31 PM" src="https://user-images.githubusercontent.com/72158949/218338886-5d02f12f-6c15-425e-9ed0-32761f910d40.png">
+<img width="1440" alt="Screen Shot 2023-02-13 at 10 22 55 PM" src="https://user-images.githubusercontent.com/72158949/218658174-4cf18afa-a972-420e-bae9-1c6901c04e80.png">
+
 
 ### 5. DataUserDemo
 **a.** The Lombok Annonation or Feature being tested <br/>
