@@ -51,6 +51,15 @@ public class ConstructorUserDemo {
           String method = theMethod.toString() ;
           System.out.format( "  %s\n", method ) ;
       }
+
+      System.out.println( "\nConstructors:" ) ;
+      Constructor gmCons[] = gmClass.getConstructors() ;
+      for ( int i=0; i <gmCons.length; i++ )
+      {
+          Constructor theCons = gmCons[i] ;
+          String cons = theCons.toString() ;
+          System.out.format( "  %s\n", cons ) ;
+      }
       
   }  
 
