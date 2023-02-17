@@ -52,6 +52,7 @@ public class ConstructorUserDemo {
           System.out.format( "  %s\n", method ) ;
       }
 
+      /* Added extra code here to print out the generated constructors since getMethods() does not get the constructors */
       System.out.println( "\nConstructors:" ) ;
       Constructor gmCons[] = gmClass.getConstructors() ;
       for ( int i=0; i <gmCons.length; i++ )
