@@ -58,6 +58,11 @@ GumballMachine gm = (GumballMachine) session.getAttribute("gumball");
 ```
 would not make sense as we do not have sticky sesssions. If we do not have a session, then it would mean that the GumballMachine object would not be in the session table; hence, the object gm would be null and causes our application to crash if we try to use the object in the method calls of _insertQuarter()_ and _turnCrank()_. Once we have cookies enabled, we will be routed to the correct backend that stores our data.
 
+<img width="1440" alt="Screen Shot 2023-02-24 at 1 58 52 PM" src="https://user-images.githubusercontent.com/72158949/221301475-e2e56f44-8a1c-43ef-a825-d252a0cd2fdb.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 1 59 01 PM" src="https://user-images.githubusercontent.com/72158949/221301479-79d0b4b4-f9ea-44dc-8ff0-957a082501da.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 1 59 27 PM" src="https://user-images.githubusercontent.com/72158949/221301482-d26b60eb-464a-4bf2-b5fe-9a1ec8165112.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 1 59 52 PM" src="https://user-images.githubusercontent.com/72158949/221301488-a24f0ae1-1a7b-49eb-96f6-6fb5a80af23f.png">
+
 ## Screenshots for some Testing via Jumpbox
 
 #### Ping the endpoints (curl get) from LB and also for each node behind LB on localhost.
