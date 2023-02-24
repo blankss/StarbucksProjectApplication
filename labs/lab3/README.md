@@ -67,8 +67,14 @@ Once we have set COOKIES_ENABLED to true, we can see that even though we opened 
 
 ## Screenshots for some Testing via Jumpbox
 
+<img width="1440" alt="Screen Shot 2023-02-24 at 2 33 41 PM" src="https://user-images.githubusercontent.com/72158949/221310647-b097e12b-952d-416d-ae79-84e12a7009fc.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 2 34 12 PM" src="https://user-images.githubusercontent.com/72158949/221310657-e805a90e-eb37-4ff9-addf-abecad6c265a.png">
+
 #### Ping the endpoints (curl get) from LB and also for each node behind LB on localhost.
 
 #### For Docker:
 - curl localhost (local machine/laptop) to Docker's LB port (port 80)
+
+<img width="1440" alt="Screen Shot 2023-02-24 at 2 38 04 PM" src="https://user-images.githubusercontent.com/72158949/221310745-ee74f654-d382-4518-9c66-11f12bb79558.png">
+
 - on each container (bash shell), curl localhost on port 8080
