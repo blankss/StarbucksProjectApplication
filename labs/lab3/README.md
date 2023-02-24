@@ -17,6 +17,13 @@ Since we have specified for 2 instances of our gumball application in the docker
 ## Screenshots of Gumball App Running with your observations and answers to the following questions (on HA Proxy Load Balancer)
 
 #### When you load the page multiple times what do you see on the Gumball Home Pages for Server Host/IP?
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 03 AM" src="https://user-images.githubusercontent.com/72158949/221274207-d83c230f-6de5-4efb-9b81-9c65746e389d.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 10 AM" src="https://user-images.githubusercontent.com/72158949/221274214-680fdf57-d2bd-4a20-97fb-67d6d7d1ca97.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 16 AM" src="https://user-images.githubusercontent.com/72158949/221274220-8f7d0a88-c997-4dab-a66b-52231f65948c.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 23 AM" src="https://user-images.githubusercontent.com/72158949/221274225-a1817789-7213-474b-be86-109dc8e77cbc.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 29 AM" src="https://user-images.githubusercontent.com/72158949/221274231-57a0c114-2b64-4c53-ac8c-4e146485e74a.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 37 AM" src="https://user-images.githubusercontent.com/72158949/221274235-f2b205b3-d812-4a92-85c7-431afe94db20.png">
+
 
 #### Can you explain where that IP value comes from?
 
