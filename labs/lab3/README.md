@@ -40,19 +40,19 @@ which makes it seem that the IP values originate from our local host. <br />
 <img width="1440" alt="Screen Shot 2023-02-24 at 11 32 10 AM" src="https://user-images.githubusercontent.com/72158949/221274214-680fdf57-d2bd-4a20-97fb-67d6d7d1ca97.png">
 
 ### Now, try to add some quarters and purchase some gumballs. Do you see the inventory depleting?  Are there any errors?
-If we, at this point, try to add some quarters and/or purchase some gumballs, we will get a **Whitelabel Error Page**, which makes it so we cannot even see the inventory anymore. When we take a look at the load balancer page, we can see what happens once we generate the error by pressing insert quarter or presesing turn crank. In the screenshots of the HA Proxy Load Balancer, we see that the HTTP 5XX response goes from 15 (before generating the error) to 16 (after generating the error). This is because we generated an unexpected error of status 500 when we try to add some quarters and/or purhcase some gumballs.
+If we, at this point, try to add some quarters and/or purchase some gumballs, we will get a **Whitelabel Error Page**, which makes it so we cannot even see the inventory anymore. When we take a look at the load balancer page, we can see what happens once we generate the error by pressing insert quarter or presesing turn crank. In the screenshots of the HA Proxy Load Balancer, we see that the HTTP 5XX response goes from 15 (before generating the error) to 16 (after generating the error). This is because we generated an unexpected error of status 500 when we try to add some quarters and/or purhcase some gumballs. Additionally, we can observe a _java.lang.NullPointerException_ in our docker dashboard on line number 69 of our program _GumballMachineController.java_.
 
 ### Is there a setting that can avoid the error?  Why does it work (or Why not).
 When we take a look at the _docker-compose.yaml_ file and looking at the COOKIES_ENABLED option, we see that it is set to false. However, in the code that we were given, the code is written to be used in tandem with sessions. Since sticky sessions are made possible with the help of cookies, setting the cookies option to be false would logically generate errors in the code as the code expects the application to have cookies enabled. To fix this issue, we can simply set COOKIES_ENABLED to be true by changing the .yaml file to:
 ```
 COOKIES_ENABLED: "true"
 ```
-With this, the code in @PostMapping should work as we have a session now. Before, inserting a quarter or turning the crank would not work as the line:
+With this, the code in the _postAction_ method should work as we have a session now. Before, inserting a quarter or turning the crank would not work as the line:
 ```
 HttpSession session = request.getSession();
 GumballMachine gm = (GumballMachine) session.getAttribute("gumball");
 ```
-would not make sense as we do not have sticky sesssions. Once we have cookies enabled, we will be routed to the correct backend that stores our data.
+would not make sense as we do not have sticky sesssions. If we do not have a session, then it would mean that the GumballMachine object would not be in the session table; hence, the object gm would be null and causes our application to crash if we try to use the object in the method calls of _insertQuarter()_ and _turnCrank()_. Once we have cookies enabled, we will be routed to the correct backend that stores our data.
 
 ## Screenshots for some Testing via Jumpbox
 
