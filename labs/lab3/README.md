@@ -17,13 +17,13 @@ Since we have specified for 2 instances of our gumball application in the docker
 ## Screenshots of Gumball App Running with your observations and answers to the following questions (on HA Proxy Load Balancer)
 
 ### When you load the page multiple times what do you see on the Gumball Home Pages for Server Host/IP?
-When we load the page multiple times, we can see that each page we load up is the other Server Host/IP, which most likely means that the load balancer is using a Round Robin algorithm to distribute incoming requests. Since we have two instances, the alternation would go from the Server Host/IP: HERE to the Server Host/IP: HERE. As demonstrated in the screenshots, each time we bring up localhost:80, we hit the next instance on docker. I have loaded the application 6 times and each time I see that the Server Host/IP alternates between 2 possibilities.
+When we load the page multiple times, we can see that each page we load up is the other Server Host/IP, which most likely means that the load balancer is using a Round Robin algorithm to distribute incoming requests. Since we have two instances, the alternation would go from the Server Host/IP: 3e9630783bd6/172.18.0.3 to the Server Host/IP: aeb1f8532524/172.18.0.2. As demonstrated in the screenshots, each time we bring up localhost:80, we hit the next instance on docker. I have loaded the application 6 times and each time I see that the Server Host/IP alternates between 2 possibilities. Of course, these pairings would change each time we docker compose down and then docker compose up.
 
 <img width="1440" alt="Screen Shot 2023-02-24 at 11 32 03 AM" src="https://user-images.githubusercontent.com/72158949/221274207-d83c230f-6de5-4efb-9b81-9c65746e389d.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 11 32 10 AM" src="https://user-images.githubusercontent.com/72158949/221274214-680fdf57-d2bd-4a20-97fb-67d6d7d1ca97.png">
 
 ### Can you explain where that IP value comes from?
-Using the screenshots from the previous question, we can see that the IP value comes from how many instances of our application we are running. Since we are running two instances on docker, we know that there will be 2 unique Server Host/IP values. In this case, we have gumball-1 having the Server Host/IP value of: HERE and gumball-2 having the Server Host/IP value of: HERE. If we take a look at the gumball.html page, we see the line:
+Using the screenshots from the previous question, we can see that the IP value comes from how many instances of our application we are running. Since we are running two instances on docker, we know that there will be 2 unique Server Host/IP values. In this case, we have gumball-1 having the Server Host/IP value of: 3e9630783bd6/172.18.0.3 and gumball-2 having the Server Host/IP value of: aeb1f8532524/172.18.0.2. If we take a look at the gumball.html page, we see the line:
 ```
 <pre>Server Host/IP:  <span th:text="${server}" /></pre>
 ```
