@@ -17,14 +17,10 @@ Since we have specified for 2 instances of our gumball application in the docker
 ## Screenshots of Gumball App Running with your observations and answers to the following questions (on HA Proxy Load Balancer)
 
 ### When you load the page multiple times what do you see on the Gumball Home Pages for Server Host/IP?
-When we load the page multiple times, we can see that each page we load up is the other Server Host/IP, which most likely means that the load balancer is using a Round Robin algorithm to distribute incoming requests. Since we have two instances, the alternation would go from the Server Host/IP: HERE to the Server Host/IP: HERE. As demonstrated in the screenshots, each time we bring up localhost:80, we hit the next instance on docker.
+When we load the page multiple times, we can see that each page we load up is the other Server Host/IP, which most likely means that the load balancer is using a Round Robin algorithm to distribute incoming requests. Since we have two instances, the alternation would go from the Server Host/IP: HERE to the Server Host/IP: HERE. As demonstrated in the screenshots, each time we bring up localhost:80, we hit the next instance on docker. I have loaded the application 6 times and each time I see that the Server Host/IP alternates between 2 possibilities.
 
 <img width="1440" alt="Screen Shot 2023-02-24 at 11 32 03 AM" src="https://user-images.githubusercontent.com/72158949/221274207-d83c230f-6de5-4efb-9b81-9c65746e389d.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 11 32 10 AM" src="https://user-images.githubusercontent.com/72158949/221274214-680fdf57-d2bd-4a20-97fb-67d6d7d1ca97.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 16 AM" src="https://user-images.githubusercontent.com/72158949/221274220-8f7d0a88-c997-4dab-a66b-52231f65948c.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 23 AM" src="https://user-images.githubusercontent.com/72158949/221274225-a1817789-7213-474b-be86-109dc8e77cbc.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 29 AM" src="https://user-images.githubusercontent.com/72158949/221274231-57a0c114-2b64-4c53-ac8c-4e146485e74a.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 37 AM" src="https://user-images.githubusercontent.com/72158949/221274235-f2b205b3-d812-4a92-85c7-431afe94db20.png">
 
 ### Can you explain where that IP value comes from?
 Using the screenshots from the previous question, we can see that the IP value comes from how many instances of our application we are running. Since we are running two instances on docker, we know that there will be 2 unique Server Host/IP values. In this case, we have gumball-1 having the Server Host/IP value of: HERE and gumball-2 having the Server Host/IP value of: HERE. If we take a look at the gumball.html page, we see the line:
@@ -41,9 +37,7 @@ try {
         } catch (Exception e) { }
 model.addAttribute( "server",  host_name + "/" + server_ip ) ;
 ```
-which makes it seem that the IP values originate from the local host. <br />
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 03 AM" src="https://user-images.githubusercontent.com/72158949/221274207-d83c230f-6de5-4efb-9b81-9c65746e389d.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 11 32 10 AM" src="https://user-images.githubusercontent.com/72158949/221274214-680fdf57-d2bd-4a20-97fb-67d6d7d1ca97.png">
+which makes it seem that the IP values originate from the local host. All in all, the IP values come from each separate docker container, in this case, we have 2 so we have 2 unique values. The screenshots for the IP addresses can be referred to above. <br />
 
 ### Now, try to add some quarters and purchase some gumballs. Do you see the inventory depleting?  Are there any errors?
 If we, at this point, try to add some quarters and/or purchase some gumballs, we will get a **Whitelabel Error Page**, which makes it so we cannot even see the inventory anymore. When we take a look at the load balancer page, we can see what happens once we generate the error by pressing insert quarter or presesing turn crank. In the screenshots of the HA Proxy Load Balancer, we see that the HTTP 5XX response goes from 15 (before generating the error) to 16 (after generating the error). This is because we generated an unexpected error of status 500 when we try to add some quarters and/or purhcase some gumballs. Additionally, we can observe a _java.lang.NullPointerException_ in our docker dashboard on line number 69 of our program _GumballMachineController.java_.
@@ -51,7 +45,6 @@ If we, at this point, try to add some quarters and/or purchase some gumballs, we
 <img width="1440" alt="Screen Shot 2023-02-24 at 12 15 43 PM" src="https://user-images.githubusercontent.com/72158949/221287396-e5feb4a1-f884-4e85-b36b-765bcc426ade.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 12 16 18 PM" src="https://user-images.githubusercontent.com/72158949/221287401-c1bcacc0-98b3-444d-8943-61b5114ad1b2.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 12 40 58 PM" src="https://user-images.githubusercontent.com/72158949/221287407-0eae3fe5-35ee-4b14-bdd9-2f9155189799.png">
-
 
 ### Is there a setting that can avoid the error?  Why does it work (or Why not).
 When we take a look at the _docker-compose.yaml_ file and looking at the COOKIES_ENABLED option, we see that it is set to false. However, in the code that we were given, the code is written to be used in tandem with sessions. Since sticky sessions are made possible with the help of cookies, setting the cookies option to be false would logically generate errors in the code as the code expects the application to have cookies enabled. To fix this issue, we can simply set COOKIES_ENABLED to be true by changing the .yaml file to:
