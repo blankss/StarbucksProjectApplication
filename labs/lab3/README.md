@@ -63,6 +63,8 @@ would not make sense as we do not have sticky sesssions. If we do not have a ses
 <img width="1440" alt="Screen Shot 2023-02-24 at 1 59 27 PM" src="https://user-images.githubusercontent.com/72158949/221301482-d26b60eb-464a-4bf2-b5fe-9a1ec8165112.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 1 59 52 PM" src="https://user-images.githubusercontent.com/72158949/221301488-a24f0ae1-1a7b-49eb-96f6-6fb5a80af23f.png">
 
+Once we have set COOKIES_ENABLED to true, we can see that even though we opened another tab and accessed localhost:80, the load balancer knows to send us back to the instance that we have accessed last time. The application also works as expected now with the inventory decreasing from inserting a quarter and turning the crank.
+
 ## Screenshots for some Testing via Jumpbox
 
 #### Ping the endpoints (curl get) from LB and also for each node behind LB on localhost.
