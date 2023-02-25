@@ -66,10 +66,23 @@ would not make sense as we do not have sticky sesssions. If we do not have a ses
 Once we have set COOKIES_ENABLED to true, we can see that even though we opened another tab and accessed localhost:80, the load balancer knows to send us back to the instance that we have accessed last time. The application also works as expected now with the inventory decreasing from inserting a quarter and turning the crank.
 
 ## Screenshots for some Testing via Jumpbox
+
+### Individual Containers 
+This only works if the individual containers are actually up and running as we are using the terminal inside of the container. A better way to test whether a container is up would be to use a jump box.
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 15 PM" src="https://user-images.githubusercontent.com/72158949/221327454-e3027ed0-a956-4d43-bef8-f3f913f1cbcb.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 42 PM" src="https://user-images.githubusercontent.com/72158949/221327457-a4ea1f0d-1950-4148-b087-d37aa2e9d222.png">
+
+### Jumpbox
+With a jumpbox, we have a separate container that we can access and use its terminal to ping other containers to see if they are running or not. When we curl/ping gumball-1 and gumball-2, the HTML content is returned, which means that the container is up and healthy.
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 01 09 PM" src="https://user-images.githubusercontent.com/72158949/221327461-ad6b2d6f-0b7a-43f4-8de1-ec1adf211208.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 01 24 PM" src="https://user-images.githubusercontent.com/72158949/221327464-83041f50-26f6-4411-8e8c-84fece868055.png">
+
+### Localhost
+Outside of docker containers, we can also curl/ping from the outside environment such as our localhost or local machine. This requires us to do:
+```
+curl localhost:80
+```
+instead of 8080 since port 80 is the only open port we can use to access the web application that is managed by the load balancer. However, this may not be the best way for testing as the load balancer will forward us a working container, which does not allow us to know if a container is not working.
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 03 06 PM" src="https://user-images.githubusercontent.com/72158949/221327465-95db21df-0ccd-4ec0-8a10-0232472c2332.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 03 15 PM" src="https://user-images.githubusercontent.com/72158949/221327466-57bc8730-7c30-437b-ad9b-9c9da8cba515.png">
 
