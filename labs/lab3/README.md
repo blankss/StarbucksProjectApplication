@@ -66,15 +66,11 @@ would not make sense as we do not have sticky sesssions. If we do not have a ses
 Once we have set COOKIES_ENABLED to true, we can see that even though we opened another tab and accessed localhost:80, the load balancer knows to send us back to the instance that we have accessed last time. The application also works as expected now with the inventory decreasing from inserting a quarter and turning the crank.
 
 ## Screenshots for some Testing via Jumpbox
+<img width="1440" alt="Screen Shot 2023-02-24 at 4 56 15 PM" src="https://user-images.githubusercontent.com/72158949/221327454-e3027ed0-a956-4d43-bef8-f3f913f1cbcb.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 4 56 42 PM" src="https://user-images.githubusercontent.com/72158949/221327457-a4ea1f0d-1950-4148-b087-d37aa2e9d222.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 5 01 09 PM" src="https://user-images.githubusercontent.com/72158949/221327461-ad6b2d6f-0b7a-43f4-8de1-ec1adf211208.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 5 01 24 PM" src="https://user-images.githubusercontent.com/72158949/221327464-83041f50-26f6-4411-8e8c-84fece868055.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 5 03 06 PM" src="https://user-images.githubusercontent.com/72158949/221327465-95db21df-0ccd-4ec0-8a10-0232472c2332.png">
+<img width="1440" alt="Screen Shot 2023-02-24 at 5 03 15 PM" src="https://user-images.githubusercontent.com/72158949/221327466-57bc8730-7c30-437b-ad9b-9c9da8cba515.png">
 
-<img width="1440" alt="Screen Shot 2023-02-24 at 2 33 41 PM" src="https://user-images.githubusercontent.com/72158949/221310647-b097e12b-952d-416d-ae79-84e12a7009fc.png">
-<img width="1440" alt="Screen Shot 2023-02-24 at 2 34 12 PM" src="https://user-images.githubusercontent.com/72158949/221310657-e805a90e-eb37-4ff9-addf-abecad6c265a.png">
 
-#### Ping the endpoints (curl get) from LB and also for each node behind LB on localhost.
-
-#### For Docker:
-- curl localhost (local machine/laptop) to Docker's LB port (port 80)
-
-<img width="1440" alt="Screen Shot 2023-02-24 at 2 38 04 PM" src="https://user-images.githubusercontent.com/72158949/221310745-ee74f654-d382-4518-9c66-11f12bb79558.png">
-
-- on each container (bash shell), curl localhost on port 8080
