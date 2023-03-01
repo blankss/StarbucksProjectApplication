@@ -68,7 +68,7 @@ Once we have set COOKIES_ENABLED to true, we can see that even though we opened 
 ## Screenshots for some Testing via Jumpbox
 
 ### Individual Containers 
-This only works if the individual containers are actually up and running as we are using the terminal inside of the container. A better way to test whether a container is up would be to use a jump box.
+This only works if the individual containers are actually up and running as we are using the terminal inside of the container. A better way to test whether a container is running would be to use a jump box.
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 15 PM" src="https://user-images.githubusercontent.com/72158949/221327454-e3027ed0-a956-4d43-bef8-f3f913f1cbcb.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 42 PM" src="https://user-images.githubusercontent.com/72158949/221327457-a4ea1f0d-1950-4148-b087-d37aa2e9d222.png">
 
@@ -82,7 +82,7 @@ Outside of docker containers, we can also curl/ping from the outside environment
 ```
 curl localhost:80
 ```
-instead of 8080 since port 80 is the only open port we can use to access the web application that is managed by the load balancer. However, this may not be the best way for testing as the load balancer will forward us a working container, which does not allow us to know if a container is not working.
+instead of port 8080 since port 80 is the only open port we can use to access the web application outside of docker that is managed by the load balancer. However, this may not be the best way for testing as the load balancer will forward us to a working container, which does not allow us to know if a specific container is working or not.
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 03 06 PM" src="https://user-images.githubusercontent.com/72158949/221327465-95db21df-0ccd-4ec0-8a10-0232472c2332.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 5 03 15 PM" src="https://user-images.githubusercontent.com/72158949/221327466-57bc8730-7c30-437b-ad9b-9c9da8cba515.png">
 
