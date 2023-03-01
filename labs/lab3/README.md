@@ -68,7 +68,7 @@ Once we have set COOKIES_ENABLED to true, we can see that even though we opened 
 ## Screenshots for some Testing via Jumpbox
 
 ### Individual Containers 
-This only works if the individual containers are actually up and running as we are using the terminal inside of the container. A better way to test whether a container is running would be to use a jump box.
+This only works if the individual containers are actually up and running as we are using the terminal inside of the container. A better way to test whether a container is running would be to use a jumpbox.
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 15 PM" src="https://user-images.githubusercontent.com/72158949/221327454-e3027ed0-a956-4d43-bef8-f3f913f1cbcb.png">
 <img width="1440" alt="Screen Shot 2023-02-24 at 4 56 42 PM" src="https://user-images.githubusercontent.com/72158949/221327457-a4ea1f0d-1950-4148-b087-d37aa2e9d222.png">
 
