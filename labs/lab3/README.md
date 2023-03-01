@@ -47,7 +47,7 @@ If we, at this point, try to add some quarters and/or purchase some gumballs, we
 <img width="1440" alt="Screen Shot 2023-02-24 at 12 40 58 PM" src="https://user-images.githubusercontent.com/72158949/221287407-0eae3fe5-35ee-4b14-bdd9-2f9155189799.png">
 
 ### Is there a setting that can avoid the error?  Why does it work (or Why not).
-When we take a look at the _docker-compose.yaml_ file and looking at the COOKIES_ENABLED option, we see that it is set to false. However, in the code that we were given, the code is written to be used in tandem with sessions. Since sticky sessions are made possible with the help of cookies, setting the cookies option to be false would logically generate errors in the code as the code expects the application to have cookies enabled. To fix this issue, we can simply set COOKIES_ENABLED to be true by changing the .yaml file to:
+When we take a look at the _docker-compose.yaml_ file and look at the COOKIES_ENABLED option, we see that it is set to false. However, in the code that we were given, the code is written to be used in tandem with sessions. Since sticky sessions are made possible with the help of cookies, setting the cookies option to be false would logically generate errors in the code as the code expects the application to have cookies enabled. To fix this issue, we can simply set COOKIES_ENABLED to be true by changing the .yaml file to:
 ```
 COOKIES_ENABLED: "true"
 ```
