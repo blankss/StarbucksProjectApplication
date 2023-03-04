@@ -16,4 +16,16 @@ By adding security configurations inside of our WebSecurityConfig.java file, we 
 
 ## Screenshots of Gumball App (Version 2) Running on Docker Host with your observations and answers to the following question
 
+<img width="1440" alt="Screen Shot 2023-03-04 at 2 44 15 PM" src="https://user-images.githubusercontent.com/72158949/222932005-8a49fa33-374b-4e81-9128-bbc58da6dd50.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 2 44 59 PM" src="https://user-images.githubusercontent.com/72158949/222932006-836ac4c0-d84c-471a-8e6a-59399c43db09.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 2 45 21 PM" src="https://user-images.githubusercontent.com/72158949/222932010-e4012ab8-ba01-4c59-a0f8-43632682e52c.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 2 45 34 PM" src="https://user-images.githubusercontent.com/72158949/222932011-8a7422e9-f659-4a53-9abd-19fb377edbe6.png">
+
 ## Screenshots of Spring Gumball Replay Attack (Before & After)
+
+<img width="1440" alt="Screen Shot 2023-03-04 at 3 14 06 PM" src="https://user-images.githubusercontent.com/72158949/222933228-5090eb42-e57b-4b5f-98b8-ad86283d44d3.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 3 15 07 PM" src="https://user-images.githubusercontent.com/72158949/222933230-fa15be12-d566-41a5-b20d-de4dd328215b.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 3 15 37 PM" src="https://user-images.githubusercontent.com/72158949/222933232-68c5ad68-64bd-4a16-9802-84d51a962cbf.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 3 22 58 PM" src="https://user-images.githubusercontent.com/72158949/222933233-32a44d14-23f4-4277-ab5f-ae2fedfb7f38.png">
+<img width="1440" alt="Screen Shot 2023-03-04 at 3 26 11 PM" src="https://user-images.githubusercontent.com/72158949/222933236-38ad6e31-a9cc-4781-b7de-d3c129b3488c.png">
+
