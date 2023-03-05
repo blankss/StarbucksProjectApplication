@@ -8,11 +8,13 @@ By adding security configurations inside of our WebSecurityConfig.java file, we 
 <img width="1440" alt="Screen Shot 2023-03-04 at 12 04 57 PM" src="https://user-images.githubusercontent.com/72158949/222928063-bff70ffa-c711-4b7a-abbe-7eb1bb5f11fb.png">
 <img width="1440" alt="Screen Shot 2023-03-04 at 12 05 11 PM" src="https://user-images.githubusercontent.com/72158949/222928064-6be58a07-e55d-4857-87eb-d78206b63cdd.png">
 <br />
+
 ## Screenshots of your deployment of Spring Gumball (Version 2) to Docker Host
 
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 30 24 PM" src="https://user-images.githubusercontent.com/72158949/222931739-0a9bac2f-58b6-4fee-bca7-43e352fffb19.png">
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 30 55 PM" src="https://user-images.githubusercontent.com/72158949/222931744-8ddc5a29-6c35-4157-a81b-3b644e8e38e9.png">
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 40 28 PM" src="https://user-images.githubusercontent.com/72158949/222931804-eb671b65-5239-45ec-800b-b8beffc14229.png">
+<br />
 
 ## Screenshots of Gumball App (Version 2) Running on Docker Host with your observations and answers to the following question
 ### 1. Do you see any errors that were observed in Spring Gumball (Version 1)? <br />
@@ -24,6 +26,7 @@ The hash is used to ensure that the request from the user is a valid request and
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 44 59 PM" src="https://user-images.githubusercontent.com/72158949/222932006-836ac4c0-d84c-471a-8e6a-59399c43db09.png">
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 45 21 PM" src="https://user-images.githubusercontent.com/72158949/222932010-e4012ab8-ba01-4c59-a0f8-43632682e52c.png">
 <img width="1440" alt="Screen Shot 2023-03-04 at 2 45 34 PM" src="https://user-images.githubusercontent.com/72158949/222932011-8a7422e9-f659-4a53-9abd-19fb377edbe6.png">
+<br />
 
 ## Screenshots of Spring Gumball Replay Attack (Before & After)
 If we use the initial Spring Gumball v2.0 program locally, we would be able to demonstrate a replay attack as there were no security measures in place to counter the attack. We have to run the code locally as Spring Gumball v2.0 still uses sessions, which would mean that we would get a Whitelabel error if we do docker-compose up without setting cookies to be true. After rebuilding the application with the modified Spring Gumball v2.0 code, we were successfully able to block the replay attack that used Tamper Dev as the code has specified a timestamp that ensures the received request did not exceed the specified length of time, which was 1000ms in this case. If the request takes longer than the specified length of time, the program wil throw a _GumballServerError()_ which is similar to the one if the hash comparison is false. 
