@@ -30,23 +30,71 @@
 <img width="1440" alt="Screen Shot 2023-03-10 at 2 59 35 PM" src="https://user-images.githubusercontent.com/72158949/224444204-e62e08d1-3a26-4e1c-9c43-41c51b7b7383.png">
 
 ## Screenshots for Spring REST API showing Request/Response to Each API call (Spring Level 3)
+### Notes
+* LoadDatabase.java has to be tampered with to be able to access both the Employee and Order objects that are in two different folders
+  * I opted for doing this approach instead of putting all the Objects and their respective functionalities into just a single payroll folder since it was cleaner
+* Since we are loading 2 Order objects as well, the next available ID if we create a new Employee would be ID 5
+
+### Get all loaded Employees with GET request 
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 13 42 PM" src="https://user-images.githubusercontent.com/72158949/224516255-1ba4bab9-a850-4b40-810b-485b6711cd43.png">
+
+### Get Employee with ID 1 with GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 14 04 PM" src="https://user-images.githubusercontent.com/72158949/224516262-b3d3e1d8-4b8a-4c6b-b885-7aaee32c42bf.png">
+
+### Get nonexistent Employee with ID 99 with GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 14 24 PM" src="https://user-images.githubusercontent.com/72158949/224516264-f779ea87-1590-494b-8e37-be17af6c6bef.png">
+
+### Create new Employee with next available ID with POST request <br />
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 19 37 PM" src="https://user-images.githubusercontent.com/72158949/224516266-1915aff1-5c4e-4d14-b226-2d2708b04413.png">
+
+### Check if Employee is created by trying to access the Employee with their ID
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 20 32 PM" src="https://user-images.githubusercontent.com/72158949/224516268-c09776c0-9fe1-4edc-8d24-606bdfa8ef3e.png">
+
+### Update newly created Employee's role with PUT request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 20 55 PM" src="https://user-images.githubusercontent.com/72158949/224516270-c09b0976-ea54-4edf-a19f-2b2e70cf17a2.png">
-<img width="1440" alt="Screen Shot 2023-03-11 at 3 21 16 PM" src="https://user-images.githubusercontent.com/72158949/224516271-5b59a777-3d73-46c2-9766-0e9f12036d50.png">
+
+### Check if update and creation worked by getting all the Employees with GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 21 26 PM" src="https://user-images.githubusercontent.com/72158949/224516272-19782535-7a4e-499f-b1ee-6e69e90e5f0f.png">
+<img width="1440" alt="Screen Shot 2023-03-11 at 3 21 16 PM" src="https://user-images.githubusercontent.com/72158949/224516271-5b59a777-3d73-46c2-9766-0e9f12036d50.png">
+
+### Delete newly created Employee with DELETE request <br />
+* Note: there was no defined response for DELETE so we just get an empty response page when we delete an Employee that is signified by the status code of 204.
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 21 34 PM" src="https://user-images.githubusercontent.com/72158949/224516275-d5982040-55a0-4af9-b3d4-a09af4cba871.png">
+
+### Check if Employee is deleted with GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 21 57 PM" src="https://user-images.githubusercontent.com/72158949/224516276-24446325-ce3d-45e3-b851-254f3de4a9b6.png">
+
+## Order section <br />
+* With rest level3, we have included a new section of Orders, which we also have loaded some data for as well.
+
+### Get all Orders with GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 22 08 PM" src="https://user-images.githubusercontent.com/72158949/224516278-03070d0b-4964-4404-aba2-a5e0d33ce974.png">
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 22 41 PM" src="https://user-images.githubusercontent.com/72158949/224516281-023f2995-dfaa-4ff5-95bc-bba77aea316f.png">
+
+### Attempt to cancel a completed Order via a DELETE request <br />
+* Note: we have a response set for this DELETE request as this request is invalid for an Order that is already completed
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 22 49 PM" src="https://user-images.githubusercontent.com/72158949/224516282-267ade9f-4e4a-4d6d-b15f-dc2bc47258a4.png">
+
+### Attempt to update a completed Order via a PUT request <br />
+* Note: we have a response set for this PUT request as this request is invalid for an Order that is already completed
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 23 22 PM" src="https://user-images.githubusercontent.com/72158949/224516283-fb81d1c8-e2ef-4530-bcb7-bf6939ccab33.png">
+
+### Cancel an in-progress Order via a DELETE request <br />
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 24 01 PM" src="https://user-images.githubusercontent.com/72158949/224516284-648d8bd2-fdd6-4380-9ac2-6a4dd11929b2.png">
+
+### Check cancelled Order via a GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 24 14 PM" src="https://user-images.githubusercontent.com/72158949/224516287-2dd01d1a-7653-4eb9-b6c1-c54e8139bb4f.png">
+
+### Attempt to update a cancelled order via a PUT request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 24 35 PM" src="https://user-images.githubusercontent.com/72158949/224516288-2143c0bb-ee21-4518-81f8-6f1c6396748e.png">
+
+## New Session to Reset Statuses of Orders
+
+### Attempt to complete a cancelled Order via a PUT request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 24 57 PM" src="https://user-images.githubusercontent.com/72158949/224516289-5bab457c-ad2f-4bdf-8215-df535810cbb5.png">
+
+### Complete an in-progress Order via a PUT request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 29 52 PM" src="https://user-images.githubusercontent.com/72158949/224516291-d4fcb339-70ba-4e00-b2ce-2a6aa96cfc15.png">
+
+### Check completed Order via a GET request
 <img width="1440" alt="Screen Shot 2023-03-11 at 3 30 00 PM" src="https://user-images.githubusercontent.com/72158949/224516294-0bcf0691-bd3b-45fd-8f50-2e0841051004.png">
