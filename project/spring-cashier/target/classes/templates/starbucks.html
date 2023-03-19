@@ -1,5 +1,6 @@
-
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Starbucks Reserved</title>
 
@@ -40,6 +41,8 @@
 <h1 align="center">Welcome to Starbucks Reserved</h1>
 
 <!-- FORM SECTION -->
+<center><form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/></form></center>
 
 <form name="form" method="post" action="">
 
@@ -49,9 +52,9 @@
     <input type="hidden" name="register" id="register" value="{{register}}" />
 
     <p>
-    <div align="center">
+    <div>
           <pre id="pre">
-          <span th:text="${message}" />
+          <center><span th:text="${message}" /></center>
           </pre>
     </div>
     </p>

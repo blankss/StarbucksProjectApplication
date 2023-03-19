@@ -1,3 +1,5 @@
-com/example/springcashier/Command.class
+com/example/springcashier/CashierSecurity.class
 com/example/springcashier/SpringCashierApplication.class
+com/example/springcashier/WebMvcConfig.class
+com/example/springcashier/Command.class
 com/example/springcashier/SpringCashierController.class
