@@ -37,7 +37,7 @@
 ### Welcome Page for User
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 45 40 PM" src="https://user-images.githubusercontent.com/72158949/226441803-a6e21c31-0ec2-4491-b48c-ca0614f9ba25.png">
 
-### Directs useer to sign in using their cashier credentials
+### Directs user to sign in using their cashier credentials
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 45 52 PM" src="https://user-images.githubusercontent.com/72158949/226441818-63a497cc-3a56-4c02-8552-f38595901e94.png">
 
 ### Cashier logged into their application, sign out button added
