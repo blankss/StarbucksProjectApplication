@@ -26,7 +26,7 @@
 * Implemented basic security features as seen in security lab with Spring Security
 * Implemented Sign Out button 
 * Created MvcConfig file to help in setting the paths of the website
- * EX: "/" maps to "/home", "/starbucks" has a view name of "starbucks"
+  * EX: "/" maps to "/home", "/starbucks" has a view name of "starbucks"
 * Configured SpringCashierController to have @RequeestMapping("/starbucks") instead of "/" since we want the "/" to be the home page for the user to have login options
 
 ### Tasks to Accomplish:
