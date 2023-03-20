@@ -20,3 +20,10 @@
 
 ### Error page when clicking on any button
 <img width="1440" alt="Screen Shot 2023-03-15 at 3 35 17 PM" src="https://user-images.githubusercontent.com/72158949/225459166-b798e834-6691-42e2-99f5-61f722807115.png">
+
+## Second Journal Entry - 3/20
+
+<img width="1440" alt="Screen Shot 2023-03-19 at 3 45 40 PM" src="https://user-images.githubusercontent.com/72158949/226441803-a6e21c31-0ec2-4491-b48c-ca0614f9ba25.png">
+<img width="1440" alt="Screen Shot 2023-03-19 at 3 45 52 PM" src="https://user-images.githubusercontent.com/72158949/226441818-63a497cc-3a56-4c02-8552-f38595901e94.png">
+<img width="1440" alt="Screen Shot 2023-03-19 at 3 46 04 PM" src="https://user-images.githubusercontent.com/72158949/226441821-92e358c3-8199-487f-8ed6-e5527b6258b2.png">
+<img width="1440" alt="Screen Shot 2023-03-19 at 3 46 14 PM" src="https://user-images.githubusercontent.com/72158949/226441827-64eff7db-e864-4c42-aeb0-2a835d4a920d.png">
