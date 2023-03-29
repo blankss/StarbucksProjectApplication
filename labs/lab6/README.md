@@ -2,12 +2,24 @@
 
 ## Part 1 - Spring JDBC and Spring MySQL
 ### Spring JDBC
+### Discussion: 
+* For spring-jdbc, we have defined a run function in the ```SpringJdbcApplication.java``` file that executes SQL commands with the ```jdbcTemplace.execute(...)``` statements
+* With the statements, we hardcoded these statements to insert customer entries and then querying the information successfully
+* JdbcTemplate allows us to execute SQL commands in our code with various functions
 <img width="1440" alt="Screen Shot 2023-03-20 at 2 31 33 PM" src="https://user-images.githubusercontent.com/72158949/226471290-03245cb9-1f3a-4a03-9981-51338e3ee8dc.png">
 
 ### Spring MySQL
 ### Notes:
 * Decided to use Postman to test the two HTTP endpoints of the application 
 * Postman is easy to use and can be used to generate the same/similar curl command or other language as well
+### Discussion:
+* In order to use MySQL with our application, we need to create and configure our ```application.properties``` file to allow for MySQL and JPA
+* We use an ```@Entity``` tag in our model object (User in this case) to make Hibernate generate a table of this class
+* Then, we create the ```UserRepository.java``` file that will be auto implemented by Spring that facilitates CRUD operations
+* In our ```MainController.java``` file, we need to define some paths that we can access as HTTP endpoints
+ * We define a ```@GetMapping``` and ```@PostMapping``` that defines our two HTTP endpoints
+ * ```@GetMapping(path="/all")```: this endpoint gets al the users that are in our database as defined by the ```userRepository.findAll()``` statement
+ * ```@PostMapping(path="/add")```: this endpoint adds a user to our database as defined by the ```userRepository.save(n)``` where n is the new user
 
 ### Inputting MySQL Commands for the database
 <img width="1440" alt="Screen Shot 2023-03-27 at 12 18 52 PM" src="https://user-images.githubusercontent.com/72158949/228045650-a9fca8b6-3749-4587-a0da-6caae59b83c3.png">
