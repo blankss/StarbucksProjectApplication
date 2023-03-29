@@ -1,9 +1,10 @@
 # CMPE 172 - Lab #6 Notes
 
-## Part 1 - Spring JDBC
+## Part 1 - Spring JDBC and Spring MySQL
+### Spring JDBC
 <img width="1440" alt="Screen Shot 2023-03-20 at 2 31 33 PM" src="https://user-images.githubusercontent.com/72158949/226471290-03245cb9-1f3a-4a03-9981-51338e3ee8dc.png">
 
-## Part 2 - Spring MySQL
+### Spring MySQL
 ### Notes:
 * Decided to use Postman to test the two HTTP endpoints of the application 
 * Postman is easy to use and can be used to generate the same/similar curl command or other language as well
@@ -16,5 +17,11 @@
 
 ### Using a GET request to get all the users via Postman
 <img width="1440" alt="Screen Shot 2023-03-27 at 12 13 22 PM" src="https://user-images.githubusercontent.com/72158949/228045643-17beeb5f-fc9c-4842-95ef-a33cb963335d.png">
+
+## Part 2 - Deployment of Spring Gumball Version 3 to Local Docker
+
+## Part 3 - Running Spring Gumball Version 3 showing Web Page (with Hash) and HTML Source of the Page showing hidden fields
+### Notes:
+* This section also includes screenshots of JPA/DB changes in Spring Gumball Version 3
 
 
