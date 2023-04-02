@@ -47,6 +47,15 @@
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 46 14 PM" src="https://user-images.githubusercontent.com/72158949/226441827-64eff7db-e864-4c42-aeb0-2a835d4a920d.png">
 
 ## Third Journal Entry - 4/2
+### Accomplished:
+* Temporarily only have one button press to process the payment for the drink order
+* Drink order persists in the order_model table in the cmpe172 table
+* Attempted to also persist registration user data to mysql container
+  * Encountering various errors, one of the recent one was that the password does not look like BCrypt, which prevents the user to log into the application
+
+### Tasks to Accomplish:
+* Design HTML Thymeleaf pages to look better, currently only using default Spring Security authentication pages and given starbucks.html
+* Either read up on gumball v3.4 to apply the registration portion or to implement a more rudimentary portion first and then expanding from there
 
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 08 15 PM" src="https://user-images.githubusercontent.com/72158949/229384162-32cc236d-a19e-41fa-88ea-b5d1238e4402.png">
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 11 59 PM" src="https://user-images.githubusercontent.com/72158949/229384164-5e04940f-338e-4864-849c-b5025c0416a9.png">
