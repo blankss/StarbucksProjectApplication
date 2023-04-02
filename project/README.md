@@ -45,3 +45,8 @@
 
 ### Clicked on sign out button, signs the cashier out
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 46 14 PM" src="https://user-images.githubusercontent.com/72158949/226441827-64eff7db-e864-4c42-aeb0-2a835d4a920d.png">
+
+## Third Journal Entry - 4/2
+
+<img width="1440" alt="Screen Shot 2023-04-02 at 4 08 15 PM" src="https://user-images.githubusercontent.com/72158949/229384162-32cc236d-a19e-41fa-88ea-b5d1238e4402.png">
+<img width="1440" alt="Screen Shot 2023-04-02 at 4 11 59 PM" src="https://user-images.githubusercontent.com/72158949/229384164-5e04940f-338e-4864-849c-b5025c0416a9.png">
