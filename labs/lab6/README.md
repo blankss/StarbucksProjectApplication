@@ -58,15 +58,14 @@
 * As discussed in class, this application right now does not work as we have CSRF enabled, which interferes with our POST requests. This can easily be addressed by simply disabling CSRF in our ```WebSecurityConfig.java``` file.
 * New files added such as ```GumballModelRepository.java``` and ```GumballQueryRepository.java``` assist in database CRUD operations 
 * As seen below, our database and application works as once we insert a quarter and turn the crank, we get a decrement of one gumball
-  * In this case, we go from 1000 to 999 gumballs as we default in starting with 1000 gumballs
+  * In this case, since we used docker-compose to have 2 instances of gumball running, we can purchase and decrement the gumball inventory in 2 different instances
+* When we use docker-compose up to scale it to 2 instances, we encounter a login error that does not log the user in even with the correct credentials
+  * This is solved by enabling sticky sessions
 
-### Initial database with 1000 gumballs
-<img width="1440" alt="Screen Shot 2023-03-29 at 11 50 26 AM" src="https://user-images.githubusercontent.com/72158949/228640250-7af7493a-f734-4149-9384-fae776e5c314.png">
+### MySQL Screenshot Proof of Deployment and decrease of gumball inventory when purchased
+<img width="1440" alt="Screen Shot 2023-04-06 at 8 18 47 PM" src="https://user-images.githubusercontent.com/72158949/230534231-e04628df-0d32-4f80-b039-4a9e1bdc5bf3.png">
+<img width="1440" alt="Screen Shot 2023-04-06 at 8 18 03 PM" src="https://user-images.githubusercontent.com/72158949/230534162-8a44f8a1-63a8-4152-a351-a0bd87732866.png">
+<img width="1440" alt="Screen Shot 2023-04-06 at 8 17 36 PM" src="https://user-images.githubusercontent.com/72158949/230534117-7f7dd1b4-d7bd-480f-80f1-14e59abd1e71.png">
 
-### Purchasing 1 gumball
-<img width="1440" alt="Screen Shot 2023-03-29 at 11 50 39 AM" src="https://user-images.githubusercontent.com/72158949/228640255-b7c7d30e-c916-430e-875a-615475f9a815.png">
-<img width="1440" alt="Screen Shot 2023-03-29 at 11 51 00 AM" src="https://user-images.githubusercontent.com/72158949/228640263-40f822d6-6175-4826-b72b-6e9c5fe1981a.png">
 
-### Updated database with 999 gumballs
-<img width="1440" alt="Screen Shot 2023-03-29 at 11 51 12 AM" src="https://user-images.githubusercontent.com/72158949/228640264-bb22dc7f-4754-44de-b350-fc9045639571.png">
 
