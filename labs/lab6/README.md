@@ -31,7 +31,7 @@
 <img width="1440" alt="Screen Shot 2023-03-27 at 12 13 22 PM" src="https://user-images.githubusercontent.com/72158949/228045643-17beeb5f-fc9c-4842-95ef-a33cb963335d.png">
 
 ## Part 2 - Deployment of Spring Gumball Version 3 to Local Docker
-<img width="1440" alt="Screen Shot 2023-03-29 at 11 47 22 AM" src="https://user-images.githubusercontent.com/72158949/228640060-0b8c69e2-bb4f-4d29-958f-e90db3154407.png">
+<img width="1440" alt="Screen Shot 2023-04-06 at 8 47 43 PM" src="https://user-images.githubusercontent.com/72158949/230537045-c1442b0a-4d4d-471a-834d-2d457b8fa35f.png">
 
 
 ## Part 3 - Running Spring Gumball Version 3 showing Web Page (with Hash) and HTML Source of the Page showing hidden fields
@@ -64,7 +64,6 @@
   * I had to set sticky sessions to be true since I used gumball-v3.1, which had security enabled and it did not allow the user to log in until it is true
 
 ### MySQL Screenshot Proof of Deployment and decrease of gumball inventory when purchased
-<img width="1440" alt="Screen Shot 2023-04-06 at 8 47 43 PM" src="https://user-images.githubusercontent.com/72158949/230537045-c1442b0a-4d4d-471a-834d-2d457b8fa35f.png">
 <img width="1440" alt="Screen Shot 2023-04-06 at 8 18 47 PM" src="https://user-images.githubusercontent.com/72158949/230534231-e04628df-0d32-4f80-b039-4a9e1bdc5bf3.png">
 <img width="1440" alt="Screen Shot 2023-04-06 at 8 18 03 PM" src="https://user-images.githubusercontent.com/72158949/230534162-8a44f8a1-63a8-4152-a351-a0bd87732866.png">
 <img width="1440" alt="Screen Shot 2023-04-06 at 8 17 36 PM" src="https://user-images.githubusercontent.com/72158949/230534117-7f7dd1b4-d7bd-480f-80f1-14e59abd1e71.png">
