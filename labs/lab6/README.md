@@ -46,7 +46,7 @@
 <img width="1440" alt="Screen Shot 2023-03-29 at 11 48 28 AM" src="https://user-images.githubusercontent.com/72158949/228640244-521560c3-cb75-4a37-883b-77b9f54ad0cf.png">
 
 ### Discussion:
-* In order for us to automatically convert an object into a table, we can use the ```@Entity``` tag to our model file to ensure that H2 automatically translates this entity into a table in the database.
+* In order for us to automatically convert an object into a table, we can use the ```@Entity``` tag to our model file to ensure that it automatically translates this entity into a table in the database named gumball_model.
   * We can further customize this by using the ```@Table``` tag to define the columns of our table in the database
 * To use MySQL, we need to create and configure the ```applications.properties``` file with the necessary configurations 
 * We need to modify our ```GumballMachineController.java``` to actually update the gumball inventory in our database by adding:
