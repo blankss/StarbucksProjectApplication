@@ -61,6 +61,7 @@
   * In this case, since we used docker-compose to have 2 instances of gumball running, we can purchase and decrement the gumball inventory in 2 different instances
 * When we use docker-compose up to scale it to 2 instances, we encounter a login error that does not log the user in even with the correct credentials
   * This is solved by enabling sticky sessions
+  * I had to set sticky sessions to be true since I used gumball-v3.1, which had security enabled and it did not allow the user to log in until it is true
 
 ### MySQL Screenshot Proof of Deployment and decrease of gumball inventory when purchased
 <img width="1440" alt="Screen Shot 2023-04-06 at 8 18 47 PM" src="https://user-images.githubusercontent.com/72158949/230534231-e04628df-0d32-4f80-b039-4a9e1bdc5bf3.png">
