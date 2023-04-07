@@ -48,7 +48,7 @@
 ### Discussion:
 * In order for us to automatically convert an object into a table, we can use the ```@Entity``` tag to our model file to ensure that H2 automatically translates this entity into a table in the database.
   * We can further customize this by using the ```@Table``` tag to define the columns of our table in the database
-* To use H2 console DB, we need to create and configure the ```applications.properties``` file with the necessary configurations 
+* To use MySQL, we need to create and configure the ```applications.properties``` file with the necessary configurations 
 * We need to modify our ```GumballMachineController.java``` to actually update the gumball inventory in our database by adding:
   ```
   found.setCountGumballs(Integer.valueOf(count.intValue() - 1)) ;
