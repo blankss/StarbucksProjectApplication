@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import java.net.InetAddress;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -16,6 +17,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.validation.BindingResult;
+import org.springframework.transaction.annotation.Transactional;
+
+
+import java.util.*;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,35 +30,94 @@ import lombok.extern.slf4j.Slf4j;
 public class SpringCashierController {
 
     @Autowired
-    private OrderRepository mysql ;
+    private OrderModelRepository mysql;
+
+    @Autowired
+    private OrderQueryRepository query;
+
+    private String[] size = {"short", "tall", "grande", "venti"};
+    private String[] milk = {"whole", "non-fat", "2%", "soy"};
+    private String[] drinks = {"mocha", "latte", "macchiato", "cappuccino"};
+    private String[] prices = {"$2.45","$2.95", "$3.65", "$4.45"};
 
     @GetMapping
     public String getAction( @ModelAttribute("command") Command command, 
-                            Model model, HttpSession session) {
+                            Model model) {
 
     	String message = "Hello Starbucks!" ;
 
-        String server_ip = "" ;
-        String host_name = "" ;
-        try { 
-            InetAddress ip = InetAddress.getLocalHost() ;
-            server_ip = ip.getHostAddress() ;
-            host_name = ip.getHostName() ;
-  
-        } catch (Exception e) { }
-
-        model.addAttribute( "message", message ) ;
-        model.addAttribute( "server",  host_name + "/" + server_ip ) ;
+        model.addAttribute("message", message);
 
         return "starbucks" ;
 
     }
+
     @PostMapping
-    public String postAction(@Valid @ModelAttribute("options") OrderModel order,  
+    @Transactional
+    public String postAction(@Valid @ModelAttribute("command") Command order,  
                             @RequestParam(value="action", required=true) String action,
                             Errors errors, Model model, HttpServletRequest request) {
-        mysql.save( order ) ;
-        model.addAttribute( "message", "Thank You for your Payment!" ) ;
+        OrderModel tmp;
+
+        String store = order.getStores();
+
+        OrderModel findOrderModelByStore = new OrderModel();
+        findOrderModelByStore.setStore(store);
+        Example<OrderModel> findOrderModelByStoreExample = Example.of(findOrderModelByStore);
+        Optional<OrderModel> findOrderModelByStoreRes = query.findOne(findOrderModelByStoreExample);
+
+        if (findOrderModelByStoreRes.isPresent() && action.equals("Place Order")) {
+            model.addAttribute("orderPlaced", "Order placed for this register already, please clear order first");
+            return "starbucks";
+        }
+        else if (findOrderModelByStoreRes.isPresent() && action.equals("Get Order")) {
+            tmp = findOrderModelByStoreRes.get();
+            String result =
+                tmp.getDrink() + "\n" + 
+                tmp.getSize() + "\n" +
+                tmp.getMilk() + "\n" + 
+                tmp.getPrice() + "\n" + 
+                tmp.getStore();
+            model.addAttribute("orderPlaced", result);
+            return "starbucks";
+        }
+        else if (findOrderModelByStoreRes.isPresent() && action.equals("Clear Order")) {
+            mysql.deleteByStore(store);
+            model.addAttribute("orderPlaced", "Order cleared");
+            return "starbucks";
+        }
+        else if (!(findOrderModelByStoreRes.isPresent()) && action.equals("Get Order") || action.equals("Clear Order")) {
+            // System.out.println(!findOrderModelByStoreRes.isPresent());
+            // System.out.println(store);
+            model.addAttribute("orderPlaced", "Please place an order first");
+            return "starbucks";
+        }
+        
+        Random rand = new Random();
+        int randomInt = rand.nextInt(4);
+        String orderSize = size[randomInt];
+        String orderMilk = milk[rand.nextInt(4)];
+        String orderDrink = drinks[rand.nextInt(4)];
+        String orderPrice = prices[randomInt];
+
+        OrderModel orderModel = new OrderModel();
+        orderModel.setSize(orderSize);
+        orderModel.setMilk(orderMilk);
+        orderModel.setDrink(orderDrink);
+        orderModel.setPrice(orderPrice);
+        orderModel.setStore(order.getStores());
+
+        String result =
+            orderDrink + "\n" + 
+            orderSize + "\n" +
+            orderMilk + "\n" + 
+            orderPrice + "\n" + 
+            order.getStores();
+
+        model.addAttribute("orderPlaced", result);
+
+        mysql.save(orderModel);
+
         return "starbucks";
 
     }

@@ -1,13 +1,8 @@
 /Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/SpringCashierController.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/UserServiceImpl.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/WebMvcConfig.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/CashierSecurity.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/User.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/OrderRepository.java
 /Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/OrderModel.java
 /Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/Command.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/UserRepository.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/UserService.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/AuthController.java
-/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/login/UserController.java
+/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/WebMvcConfig.java
+/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/CashierSecurity.java
+/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/OrderModelRepository.java
+/Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/OrderQueryRepository.java
 /Users/matthewchan/Downloads/cmpe172/cmpe172-blankss/project/spring-cashier/src/main/java/com/example/springcashier/SpringCashierApplication.java

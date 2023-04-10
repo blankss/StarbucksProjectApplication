@@ -24,17 +24,19 @@ import javax.validation.constraints.Size;
 @Data
 @RequiredArgsConstructor
 class OrderModel {
-
-    private @Id @GeneratedValue Long id;
+    
+    @Id @GeneratedValue 
+    private Long id;
 
     private String size;
     private String milk;
     private String drink;
+    private String price;
     private String store;
 
-    public String size() { return size; }
-    public String milk() { return milk; }
-    public String drink() { return drink; }
-    public String store() { return store; }
+    // public String size() { return size; }
+    // public String milk() { return milk; }
+    // public String drink() { return drink; }
+    // public String store() { return store; }
 
 }

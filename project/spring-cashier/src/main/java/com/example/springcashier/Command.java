@@ -10,5 +10,6 @@ class Command {
 
     private String action ;
     private String message ;
+    private String stores ;
     
 }
