@@ -59,3 +59,13 @@
 
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 08 15 PM" src="https://user-images.githubusercontent.com/72158949/229384162-32cc236d-a19e-41fa-88ea-b5d1238e4402.png">
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 11 59 PM" src="https://user-images.githubusercontent.com/72158949/229384164-5e04940f-338e-4864-849c-b5025c0416a9.png">
+
+## Fourth Journal Entry - 4/9
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 05 43 PM" src="https://user-images.githubusercontent.com/72158949/230806259-ae40b1f0-7660-4c09-88d4-2e5a7112c8e3.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 05 51 PM" src="https://user-images.githubusercontent.com/72158949/230806264-07d88b9f-1141-41f2-920d-a724cea4718b.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 05 59 PM" src="https://user-images.githubusercontent.com/72158949/230806265-1e93a2db-6bbd-4c31-b3ee-f66614a335fe.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 06 11 PM" src="https://user-images.githubusercontent.com/72158949/230806268-911c49a8-5b21-4824-a158-150d53aeebbe.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 06 19 PM" src="https://user-images.githubusercontent.com/72158949/230806269-19bf67d4-8c9d-4b61-aaf0-92293aca383d.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 06 32 PM" src="https://user-images.githubusercontent.com/72158949/230806271-b3c8313f-e10c-4ce8-aa73-f22b1d633eb6.png">
+<img width="1440" alt="Screen Shot 2023-04-09 at 6 06 59 PM" src="https://user-images.githubusercontent.com/72158949/230806274-83d5ba71-7eff-4bd3-ad07-50b5c0a691d4.png">
+
