@@ -91,3 +91,36 @@
 <img width="1440" alt="Screen Shot 2023-04-09 at 6 06 32 PM" src="https://user-images.githubusercontent.com/72158949/230806271-b3c8313f-e10c-4ce8-aa73-f22b1d633eb6.png">
 <img width="1440" alt="Screen Shot 2023-04-09 at 6 06 59 PM" src="https://user-images.githubusercontent.com/72158949/230806274-83d5ba71-7eff-4bd3-ad07-50b5c0a691d4.png">
 
+## Fifth Journal Entry - 4/16
+### Accomplished:
+
+### Tasks to Accomplish:
+
+## Place an order at "The Dub"
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 50 45 PM" src="https://user-images.githubusercontent.com/72158949/232347904-a76c188e-c806-433e-a3cb-cd1aefb36ccd.png">
+
+## Attempt to place another order with an active order
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 56 26 PM" src="https://user-images.githubusercontent.com/72158949/232347905-bc7130f3-6521-42e3-a2ef-03f6bb4c87d3.png">
+
+## Get order from "The Dub"
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 56 41 PM" src="https://user-images.githubusercontent.com/72158949/232347906-7545c4e2-2fec-4997-9188-69c09938dc6b.png">
+
+## Clear an order
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 56 58 PM" src="https://user-images.githubusercontent.com/72158949/232347908-20614f6a-0456-48f6-8c4d-2c18c1bde1d7.png">
+
+## Attempt to clear non-active order
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 57 06 PM" src="https://user-images.githubusercontent.com/72158949/232347909-d8e032b1-8397-422d-847a-85bbf30700b3.png">
+
+## Place another order at "Eso"
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 58 24 PM" src="https://user-images.githubusercontent.com/72158949/232347911-6d73ffaa-9308-4258-8f5e-d896b6de1f0b.png">
+
+## Place another order at "Deadwood"
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 58 54 PM" src="https://user-images.githubusercontent.com/72158949/232347913-0b28f184-7073-46a8-b261-9307a266e140.png">
+
+## MySQL Database contents
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 59 18 PM" src="https://user-images.githubusercontent.com/72158949/232347914-3d5095a8-450c-40b4-b9e8-928c63d81c2b.png">
+
+## Load Balancer displaying two backend servers with no sticky sessions
+<img width="1440" alt="Screen Shot 2023-04-16 at 3 59 44 PM" src="https://user-images.githubusercontent.com/72158949/232347915-e2b66f29-d347-428e-b817-2f4370a696fd.png">
+
+
