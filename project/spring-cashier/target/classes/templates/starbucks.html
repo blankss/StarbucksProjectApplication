@@ -41,46 +41,63 @@
 
 <!-- FORM SECTION -->
 
-<form name="form" method="post" action="">
+<form name="form" th:object="${command}" method="post" th:action="@{/starbucks}">
 
-    <input type="hidden" name="state" id="state" value="{{state}}" />
-    <input type="hidden" name="ts" id="ts" value="{{ts}}" />
-    <input type="hidden" name="hash" id="hash" value="{{hash}}" />
-    <input type="hidden" name="register" id="register" value="{{register}}" />
+  <input type="hidden" name="register" id="register" th:field="*{register}" />
 
-    <div style="background: ghostwhite; 
-      font-size: 20px; 
-      padding: 1px; 
-      border: 1px solid lightgray; 
-      margin: auto;
-      width: 200px;
-      height: 150px;
-      position: relative;">
-      <div style="position: absolute;
-        text-align: left;">
-        <span th:text="${message}" />
-        <span style="white-space: pre-line" th:text="${orderPlaced}"></span>
-      </div>
-    </div>
-
-    <br /> <br />
-
+    <p>
     <div align="center">
-        <label for="stores">Select Store:</label>
-          <select name="stores" id="stores">
-            <option value="5012349">Dub-C</option>
-            <option value="1287612">P-Town</option>
-            <option value="6498234">The City</option>
-            <option value="7812386">Eso</option>
-            <option value="8723098">The Dro</option>
-            <option value="9621043">Mateo</option>
-            <option value="1393478">Deadwood</option>
-          </select> 
-    </div>                        
+          <textarea readonly id="message" name="message" 
+                    cols="50" rows="13" th:text="${message}"/>
+    </div>
+    </p>                 
 
     <br/>
 
-    <p align="center"><img th:src="@{/images/starbucks.jpg}" /></p>
+     <div style="text-align: center">
+      <div class="options">
+          <label for="drink">Select Drink:</label>
+            <select name="drink" id="drink">
+              <option value="Caffe Latte">Caffe Latte</option>
+              <option value="Caffe Mocha">Caffe Mocha</option>
+              <option value="Caffe Americano">Caffe Americano</option>
+              <option value="Cappuccino">Cappuccino</option>
+              <option value="Hot Chocolate">Hot Chocolate</option>
+            </select> 
+          <label for="size">&nbsp;&nbsp;&nbsp;&nbsp;Select Milk:</label>
+              <select name="size" id="size">
+                <option value="tall">Tall 12 fl oz</option>
+                <option value="grande">Grande 16 fl oz</option>
+                <option value="venti">Venti 20 fl oz</option>
+            </select> 
+          <label for="milk">&nbsp;&nbsp;&nbsp;&nbsp;Select Milk:</label>
+            <select name="milk" id="milk">
+              <option value="whole">Whole Milk</option>
+              <option value="2%">2% Milk</option>
+              <option value="oat">Oatmilk</option>
+              <option value="almond">Almond</option>
+              <option value="heavy">Heavy Cream</option>
+              <option value="vanilla">Vanilla Sweet Cream</option>
+              <option value="coconut">Coconut</option>
+              <option value="soy">Soy</option>
+              <option value="half">Breve</option>
+              <option value="nonfat">Nonfat Milk</option>
+            </select> 
+            <br /> <br /> <br />
+            <label for="stores">Select Store:</label>
+              <select name="stores" id="stores">
+                <option value="5012349">Dub-C</option>
+                <option value="1287612">P-Town</option>
+                <option value="6498234">The City</option>
+                <option value="7812386">Eso</option>
+                <option value="8723098">The Dro</option>
+                <option value="9621043">Mateo</option>
+                <option value="1393478">Deadwood</option>
+              </select> 
+          </div>
+    </div> 
+
+    <p align="center"><img src="/images/starbucks.jpg"></p>
 
     <br/>
 
@@ -92,7 +109,6 @@
         <input type="submit" name="action" id="btnClearOrder" value="Clear Order">
     </p>
 
-</form>
 
 <!-- END FORM SECTION -->
 

@@ -33,6 +33,11 @@ class OrderModel {
     private String drink;
     private String price;
     private String store;
+    private String register;
+    private String status;
+    private boolean activeOrder = true;
+
+    public boolean getActiveOrder() {return activeOrder;}
 
     // public String size() { return size; }
     // public String milk() { return milk; }

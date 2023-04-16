@@ -15,21 +15,46 @@ build:
 run-jar: build
 	java -jar target/spring-cashier-1.0.jar
 
+jumpbox:
+	docker run --network spring-payments --name jumpbox -t -d ubuntu
+
 #mysql need to change to run in the network of starbucks
 mysql:
 	docker run -d --network spring-payments --name mysql -td -p 3306:3306 -e MYSQL_ROOT_PASSWORD=cmpe172 mysql:8.0
 
-#mysql terminal 
-# create database cmpe172;
-# create user 'admin'@'%' identified by 'welcome';
-# grant all on cmpe172.* to 'admin'@'%';
+mysql-up:
+	docker-compose up -d mysql
 
+#mysql terminal 
+# create database cashier;
+# create user 'admin'@'%' identified by 'welcome';
+# grant all on midterm.* to 'admin'@'%';
+
+#mysql terminal 
+# create database cashier;
+# create user 'happy'@'%' identified by 'camper';
+# grant all on cashier.* to 'happy'@'%';
+
+# Redis DB
+
+redis-local:
+	docker run --platform=linux/amd64 --name redis --network spring-payments -td -p 6379:6379 redis
+
+redis-official:
+	docker run --platform=linux/amd64 --name redis --network spring-payments -td -p 6379:6379 redis:4.0
+
+redis-shell:
+	docker exec -it redis bash 
+
+#redis-cli -h localhost -p 6379
+redis-up:
+	docker-compose up -d redis
 
 #docker need to change to run in the network of starbucks
 
 docker-build: build
 	docker build -t spring-cashier .
-	docker images
+# 	docker images
 
 docker-run:
 	docker run --network spring-payments -e "MYSQL_HOST=mysql" --name spring-cashier -td -p 8080:8080 spring-cashier

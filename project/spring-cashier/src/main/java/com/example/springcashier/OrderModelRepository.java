@@ -1,6 +1,8 @@
 package com.example.springcashier;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
@@ -10,10 +12,8 @@ public interface OrderModelRepository extends CrudRepository<OrderModel, Long> {
 
 	 // https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods
 	 // https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/#repositories.query-methods.query-creation
-	
-	 public OrderModel findOrderModelByStore(String store) ;
-
-	 public long deleteByStore(String store);
+	// https://www.baeldung.com/spring-data-jpa-query
+	 public List<OrderModel> findOrderModelByRegister(String register) ;
 
 }
 
