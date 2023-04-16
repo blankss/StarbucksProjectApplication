@@ -93,8 +93,17 @@
 
 ## Fifth Journal Entry - 4/16
 ### Accomplished:
+* Removed sticky sessions by adding Spring Session and Redis
+* Implemented all 3 functionalities (Get, Place, and Clear Order)
+  * Place Order now has working drop-down menus for drink, size, milk, and store
+  * Get and Clear order will display different messages if there is no active order
+* Edit Makefile for mysql and redis
+* Added docker compose file
 
 ### Tasks to Accomplish:
+* Add registration of new user
+* Redesign UI for login
+* Attempt client side portal
 
 ## Place an order at "The Dub"
 <img width="1440" alt="Screen Shot 2023-04-16 at 3 50 45 PM" src="https://user-images.githubusercontent.com/72158949/232347904-a76c188e-c806-433e-a3cb-cd1aefb36ccd.png">
