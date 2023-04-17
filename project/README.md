@@ -134,8 +134,17 @@
 
 ## Sixth Journal Entry - 4/17
 ### Accomplished:
+* Added registration html page
+* Basic authorization files added
+* Registration functionality added
+  * Password is hashed with bcrypt
+  * User data persists in MySQL database
 
 ### Tasks to Accomplish:
+* Error when after registration, cannot login
+  * Routes are unclear right now, correct credentials do not log the user in and instead redirects to some other URL
+* Inconsistent routing
+  * Routing after registration should route to the pretty html page, not the page after registration screenshot
 
 ## New Home Page
 <img width="1440" alt="Screen Shot 2023-04-17 at 4 39 28 PM" src="https://user-images.githubusercontent.com/72158949/232634926-a454270b-9aa9-433a-82f9-1a3f095ec2b0.png">
