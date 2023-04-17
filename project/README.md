@@ -132,4 +132,25 @@
 ## Load Balancer displaying two backend servers with no sticky sessions
 <img width="1440" alt="Screen Shot 2023-04-16 at 3 59 44 PM" src="https://user-images.githubusercontent.com/72158949/232347915-e2b66f29-d347-428e-b817-2f4370a696fd.png">
 
+## Sixth Journal Entry - 4/17
+### Accomplished:
+
+### Tasks to Accomplish:
+
+## New Home Page
+<img width="1440" alt="Screen Shot 2023-04-17 at 4 39 28 PM" src="https://user-images.githubusercontent.com/72158949/232634926-a454270b-9aa9-433a-82f9-1a3f095ec2b0.png">
+
+## Registration Page
+<img width="1440" alt="Screen Shot 2023-04-17 at 4 39 39 PM" src="https://user-images.githubusercontent.com/72158949/232634970-05b064bf-236e-4f02-abe6-9402c35fd7e7.png">
+
+## Page after registration
+<img width="1440" alt="Screen Shot 2023-04-17 at 4 40 00 PM" src="https://user-images.githubusercontent.com/72158949/232635001-6338f4db-13cc-4919-9550-6ca57d894b5c.png">
+
+## MySQL Database after registration
+<img width="1440" alt="Screen Shot 2023-04-17 at 4 40 18 PM" src="https://user-images.githubusercontent.com/72158949/232635028-f00ad8f2-da40-4926-b6c8-c6cda975e7ff.png">
+
+## Page after sign in
+<img width="1440" alt="Screen Shot 2023-04-17 at 4 40 38 PM" src="https://user-images.githubusercontent.com/72158949/232635057-6ec12faf-87ae-4ec5-91f7-bf14e23e2d32.png">
+
+
 
