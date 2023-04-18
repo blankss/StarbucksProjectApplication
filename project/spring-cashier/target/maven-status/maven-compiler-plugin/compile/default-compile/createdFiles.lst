@@ -1,8 +1,15 @@
-com/example/springcashier/CashierSecurity.class
-com/example/springcashier/WebMvcConfig.class
+com/example/springcashier/register/UserServiceImpl.class
+com/example/springcashier/config/CashierSecurity.class
 com/example/springcashier/OrderModel.class
+com/example/springcashier/register/UserRepository.class
+com/example/springcashier/register/UserController.class
 com/example/springcashier/SpringCashierApplication.class
 com/example/springcashier/OrderQueryRepository.class
+com/example/springcashier/config/CustomLoginSucessHandler.class
+com/example/springcashier/register/AuthController.class
 com/example/springcashier/Command.class
+com/example/springcashier/register/User.class
 com/example/springcashier/SpringCashierController.class
+com/example/springcashier/register/UserService.class
+com/example/springcashier/config/WebMvcConfig.class
 com/example/springcashier/OrderModelRepository.class
