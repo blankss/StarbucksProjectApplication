@@ -161,5 +161,38 @@
 ## Page after sign in
 <img width="1440" alt="Screen Shot 2023-04-17 at 4 40 38 PM" src="https://user-images.githubusercontent.com/72158949/232635057-6ec12faf-87ae-4ec5-91f7-bf14e23e2d32.png">
 
+## Seventh Journal Entry - 4/19
+### Accomplished:
+
+### Tasks to Accomplish:
+
+## Default home page
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 03 03 PM" src="https://user-images.githubusercontent.com/72158949/233210949-d906cb7d-d4c7-43e4-ba79-c896509b9877.png">
+
+## Designed login/register page taken from gumball v3.4
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 03 17 PM" src="https://user-images.githubusercontent.com/72158949/233210978-d0e6d9c8-1494-4c2a-aa4d-1d48a27ccf75.png">
+
+## Sign up with credentials
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 03 41 PM" src="https://user-images.githubusercontent.com/72158949/233211000-a44fac64-3a22-4f9b-8bb5-be1bdb6643e7.png">
+
+## Redirect to login portion
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 05 53 PM" src="https://user-images.githubusercontent.com/72158949/233211019-87c3300e-db0a-4881-861e-d2252c526817.png">
+
+## Log in with created credentials
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 06 18 PM" src="https://user-images.githubusercontent.com/72158949/233211046-9ef15e5f-d559-4096-bd14-cdb4ec71f9ec.png">
+
+## MySQL database of users
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 06 40 PM" src="https://user-images.githubusercontent.com/72158949/233211070-3673bc15-7c04-4dcc-b58d-59128c557ab7.png">
+
+## Logged in page at starbucks
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 06 50 PM" src="https://user-images.githubusercontent.com/72158949/233211092-138d99e7-68a1-41f1-9b0e-406ef21f75a1.png">
+
+## Placed an order
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 07 31 PM" src="https://user-images.githubusercontent.com/72158949/233211108-788aad96-91d9-4956-a33c-fcab0a89d17a.png">
+
+## MySQL order_model
+<img width="1440" alt="Screen Shot 2023-04-19 at 3 07 23 PM" src="https://user-images.githubusercontent.com/72158949/233211125-2f525a71-1b11-450a-ae01-879b03a1c4aa.png">
+
+
 
 
