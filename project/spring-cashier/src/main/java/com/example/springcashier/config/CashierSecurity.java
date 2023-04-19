@@ -47,17 +47,23 @@ public class CashierSecurity {
 
         http.authorizeRequests()
             // URL matching for accessibility
-            .antMatchers("/", "/login", "/register", "/h2-console/**").permitAll()
-            .antMatchers("/user/**").hasAnyAuthority("USER")
-            .anyRequest().authenticated()
+            .antMatchers("/", "/login", "/register", "/h2-console/**", "/css/**", "/js/**", "/images/**").permitAll()
+            //.antMatchers("/user/**").hasAnyAuthority("USER")
+            .antMatchers("/users").authenticated()
+            //.anyRequest().authenticated()
+            .anyRequest().permitAll()
             .and()
             // form login
-            .csrf().disable().formLogin()
-            .loginPage("/login")
-            .failureUrl("/login?error=true")
-            .successHandler(sucessHandler)
+            //.csrf().disable().formLogin()
+            /* .successHandler(sucessHandler)
             .usernameParameter("email")
-            .passwordParameter("password")
+            .passwordParameter("password") */
+            .formLogin()
+                .loginPage("/login")
+                .failureUrl("/login?error=true")
+                .defaultSuccessUrl("/starbucks")
+                .usernameParameter("email")
+                .passwordParameter("password")
             .and()
             // logout
             .logout()

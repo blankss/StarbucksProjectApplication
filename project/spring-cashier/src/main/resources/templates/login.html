@@ -6,7 +6,7 @@
 
 <html>
 <head>
-    <title>CASHIER - LOGIN</title>
+    <title>GUMBBALL - LOGIN</title>
     <link rel="stylesheet" th:href="@{login.css}" />
 </head>
 
@@ -44,6 +44,14 @@
             </form>
             <form th:action="@{/register}" th:object="${user}" method="post">
             <div class="sign-up-htm">
+                 <div class="group">
+                    <label for="pass" class="label">First Name</label>
+                    <input id="pass" type="text" class="input" th:field="*{firstName}">
+                </div>
+                 <div class="group">
+                    <label for="pass" class="label">Last Name</label>
+                    <input id="pass" type="text" class="input" th:field="*{lastName}">
+                </div>
                 <div class="group">
                     <label for="pass" class="label">Email Address</label>
                     <input id="pass" type="text" class="input" th:field="*{email}">
