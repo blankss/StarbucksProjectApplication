@@ -163,8 +163,19 @@
 
 ## Seventh Journal Entry - 4/19
 ### Accomplished:
+* Completed registration of a new user for starbucks cashier
+  * Password is hashed in database
+  * Inputted password is hashed and compared to the one in the database
+* Cashier persists in the MySQL database with information saved with the input
+* Used Spring gumball v3.4 login.css to make the login and register page look better
+  * Edited css file to fit registration credentials needed 
+* Fixed routing issue
 
 ### Tasks to Accomplish:
+* Experiment with REST API
+* Perhaps use own HTML/CSS to customize to fit own
+* Implement the next lab's (lab 7) payment portion into application
+* Look into starting storefront portion
 
 ## Default home page
 <img width="1440" alt="Screen Shot 2023-04-19 at 3 03 03 PM" src="https://user-images.githubusercontent.com/72158949/233210949-d906cb7d-d4c7-43e4-ba79-c896509b9877.png">
@@ -192,7 +203,3 @@
 
 ## MySQL order_model
 <img width="1440" alt="Screen Shot 2023-04-19 at 3 07 23 PM" src="https://user-images.githubusercontent.com/72158949/233211125-2f525a71-1b11-450a-ae01-879b03a1c4aa.png">
-
-
-
-
