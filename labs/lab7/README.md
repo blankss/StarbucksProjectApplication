@@ -20,5 +20,17 @@
 ## Lab Notes
 
 ### Discussion of Lombok, Thymeleaf, and Spring Features
+#### Lombok and Spring Data
+<img width="1440" alt="Screen Shot 2023-04-24 at 2 57 34 PM" src="https://user-images.githubusercontent.com/72158949/234125656-de2c5b6a-e097-4599-8000-edc94c06ba69.png">
+
+#### H2 Database
+<img width="1440" alt="Screen Shot 2023-04-24 at 2 53 47 PM" src="https://user-images.githubusercontent.com/72158949/234125096-45262572-3e43-47a4-b58a-564d7deb2a3b.png">
+<img width="1440" alt="Screen Shot 2023-04-24 at 2 53 56 PM" src="https://user-images.githubusercontent.com/72158949/234125100-0293fe7a-112d-4bf1-a84a-2ac1b090ebab.png">
+
+#### Thymeleaf
+<img width="1440" alt="Screen Shot 2023-04-24 at 2 57 22 PM" src="https://user-images.githubusercontent.com/72158949/234125584-4c188ca2-25f1-42b3-bde8-5eede62008e7.png">
+<img width="1440" alt="Screen Shot 2023-04-24 at 2 57 34 PM" src="https://user-images.githubusercontent.com/72158949/234125586-cbbedb25-65ab-48b7-8175-7978eb4c186b.png">
+
+
 
 ### Java JSON Using Jackson
