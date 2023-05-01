@@ -203,3 +203,33 @@
 
 ## MySQL order_model
 <img width="1440" alt="Screen Shot 2023-04-19 at 3 07 23 PM" src="https://user-images.githubusercontent.com/72158949/233211125-2f525a71-1b11-450a-ae01-879b03a1c4aa.png">
+
+## Eighth Journal Entry - 5/1
+### Accomplished:
+* Used starbucks-api and kong gateway for the application instead of previous way
+* Implemented Get Order, Place Order, and Clear Order functionalities with kong and starbucks-api
+  * The format of the message from Get Order and Place Order are returned from the API call, which is unformatted currently
+* Removed MySQL from directly saving the order, API call now does that
+
+### Tasks to Accomplish:
+* Fix/change the error reporting from throwing HTTP error to redirect or new message
+  * Currently, getting a nonexistent order, placing another order, or clearing a nonexistent order crashes the application due to throwing the HTTP error
+  * Thinking of either redirect or just returning the message that I had from previous iterations
+* Add logout functionality
+* Transition to compose stack, right now everything is separated since it does not work if in the stack
+  * After fixing, can transition to GKE
+
+## Docker Containers Running
+<img width="1440" alt="Screen Shot 2023-05-01 at 2 42 59 PM" src="https://user-images.githubusercontent.com/72158949/235539206-0bedc563-05d8-4cc3-b47d-3bc3efbc373e.png">
+
+## Place Order with API Call
+<img width="1440" alt="Screen Shot 2023-05-01 at 2 43 42 PM" src="https://user-images.githubusercontent.com/72158949/235539217-f93f1dd9-2576-4083-a0d5-c87a830460f1.png">
+
+## Get Order with API Call
+<img width="1440" alt="Screen Shot 2023-05-01 at 2 43 50 PM" src="https://user-images.githubusercontent.com/72158949/235539223-7ca3ddd0-4344-43fc-8909-ef0abee40a94.png">
+
+## Clear Order with API Call
+<img width="1440" alt="Screen Shot 2023-05-01 at 2 44 02 PM" src="https://user-images.githubusercontent.com/72158949/235539226-12b02e43-3c6b-478e-849f-5ee86c830a80.png">
+
+## Get Nonexistent Order with API Call
+<img width="1440" alt="Screen Shot 2023-05-01 at 2 44 11 PM" src="https://user-images.githubusercontent.com/72158949/235539233-9455a9ef-3cdd-41ae-ab14-b7f9d1b8cb8b.png">
