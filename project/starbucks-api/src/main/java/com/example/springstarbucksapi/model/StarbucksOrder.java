@@ -41,6 +41,7 @@ public class StarbucksOrder {
     private double total;
     private String status;
     private String register;
+    private String price;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "card_id", referencedColumnName = "id")

@@ -43,7 +43,8 @@ starbucks-network:
 	docker network create --driver bridge starbucks
 
 docker-run: docker-build
-	docker run --network starbucks -e "MYSQL_HOST=mysql" --name spring-starbucks-api -td -p 8080:8080 spring-starbucks-api	
+	docker run --network spring-payments -e "MYSQL_HOST=mysql" --name spring-payments -td -p 8080:8080 spring-starbucks-api	
+#docker run --network kong-network -e "MYSQL_HOST=mysql" --name starbucks-api -td -p 8080:8080 spring-starbucks-api	
 
 docker-clean:
 	docker stop spring-starbucks-api

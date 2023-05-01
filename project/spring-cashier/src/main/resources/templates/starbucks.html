@@ -40,6 +40,9 @@
 <h1 align="center">Welcome to Starbucks Reserved</h1>
 
 <!-- FORM SECTION -->
+<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+      <input hidden type="submit" value="Sign Out"/>
+</form> 
 
 <form name="form" th:object="${command}" method="post" th:action="@{/starbucks}">
 
@@ -64,7 +67,7 @@
               <option value="Cappuccino">Cappuccino</option>
               <option value="Hot Chocolate">Hot Chocolate</option>
             </select> 
-          <label for="size">&nbsp;&nbsp;&nbsp;&nbsp;Select Milk:</label>
+          <label for="size">&nbsp;&nbsp;&nbsp;&nbsp;Select Size:</label>
               <select name="size" id="size">
                 <option value="tall">Tall 12 fl oz</option>
                 <option value="grande">Grande 16 fl oz</option>

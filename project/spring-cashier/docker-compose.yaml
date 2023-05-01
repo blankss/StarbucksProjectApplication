@@ -25,6 +25,19 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "cmpe172"
     restart: always
+  starbucks:
+    image: spring-starbucks-api
+    depends_on:
+      - mysql
+    volumes:
+      - /tmp:/tmp
+    networks:
+      - network
+    ports:
+      - "8080:8080"
+    environment:
+      MYSQL_HOST: "mysql"
+    restart: always
   cashier:
     image: spring-cashier
     platform: linux/amd64

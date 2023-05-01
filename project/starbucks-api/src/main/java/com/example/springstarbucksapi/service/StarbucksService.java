@@ -94,91 +94,101 @@ public class StarbucksService {
         }
         // set price
         double price = 0.0;
-        switch (order.getDrink()) {
-            case "Caffe Latte":
-                switch (order.getSize()) {
-                    case "Tall":
-                        price = 2.95;
-                        break;
-                    case "Grande":
-                        price = 3.65;
-                        break;
-                    case "Venti":
-                    case "Your Own Cup":
-                        price = 3.95;
-                        break;
-                    default:
-                        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
-                }
-                break;
-            case "Caffe Americano":
-                switch (order.getSize()) {
-                    case "Tall":
-                        price = 2.25;
-                        break;
-                    case "Grande":
-                        price = 2.65;
-                        break;
-                    case "Venti":
-                    case "Your Own Cup":
-                        price = 2.95;
-                        break;
-                    default:
-                        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
-                }
-                break;
-            case "Caffe Mocha":
-                switch (order.getSize()) {
-                    case "Tall":
-                        price = 3.45;
-                        break;
-                    case "Grande":
-                        price = 4.15;
-                        break;
-                    case "Venti":
-                    case "Your Own Cup":
-                        price = 4.45;
-                        break;
-                    default:
-                        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
-                }
-                break;
-            case "Espresso":
-                switch (order.getSize()) {
-                    case "Short":
-                        price = 1.75;
-                        break;
-                    case "Tall":
-                        price = 1.95;
-                        break;
-                    default:
-                        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
-                }
-                break;
-            case "Cappuccino":
-                switch (order.getSize()) {
-                    case "Tall":
-                        price = 2.95;
-                        break;
-                    case "Grande":
-                        price = 3.65;
-                        break;
-                    case "Venti":
-                    case "Your Own Cup":
-                        price = 3.95;
-                        break;
-                    default:
-                        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
-                }
-                break;
-            default:
-                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Drink!");
+        String drink = order.getDrink();
+        String size = order.getSize();
+        if (drink.equals("Caffe Latte")) {
+            if (size.equals("tall")) {
+                price = 2.95;
+            }
+            else if (size.equals("grande")) {
+                price = 3.65;
+            }
+            else if (size.equals("venti")) {
+                price = 3.95;
+            }
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            } 
+        }
+        else if (drink.equals("Caffe Americano")) {
+            if (size.equals("tall")) {
+                price = 2.25;
+            }
+            else if (size.equals("grande")) {
+                price = 2.65;
+            }   
+            else if (size.equals("venti")) {
+                price = 2.95;
+            }
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            } 
+        }
+        else if (drink.equals("Caffe Mocha")) {
+            if (size.equals("tall")) {
+                price = 3.45;
+            }
+            else if (size.equals("grande")) {
+                price = 4.15;
+            }
+            else if (size.equals("venti")) {
+                price = 4.45;
+            }
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            } 
+        }
+        else if (drink.equals("Cappuccino")) {
+            if (size.equals("tall")) {
+                price = 2.95;
+            }
+            else if (size.equals("grande")) {
+                price = 3.65;
+            }
+            else if (size.equals("venti")) {
+                price = 3.95;
+            }   
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            } 
+        }
+        else if (drink.equals("Caffe Latte")) {
+            if (size.equals("tall")) {
+                price = 2.75;
+            }
+            else if (size.equals("grande")) {
+                price = 3.25;
+            }
+            else if (size.equals("venti")) {
+                price = 3.45;
+            }
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            }   
+        }
+        else if (drink.equals("Hot Chocolate")) {
+            if (size.equals("tall")) {
+                price = 2.75;
+            }
+            else if (size.equals("grande")) {
+                price = 3.25;
+            }
+            else if (size.equals("venti")) {
+                price = 3.45;
+            }
+            else {
+                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Size!");
+            }
+        }
+        else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Drink!");
         }
         double tax = 0.0725;
         double total = price + (price * tax);
         double scale = Math.pow(10, 2);
         double rounded = Math.round(total * scale) / scale;
         order.setTotal(rounded);
+        order.setPrice("$" + rounded);
         // save order
         order.setRegister(regid);
         order.setStatus("Ready for Payment.");
@@ -225,6 +235,7 @@ public class StarbucksService {
         if (balance - price < 0) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Insufficient Funds on Card.");
         }
+
         double new_balance = balance - price;
         card.setBalance(new_balance);
         String status = "Paid with Card: " + cardnum + " Balance: $" + new_balance + ".";

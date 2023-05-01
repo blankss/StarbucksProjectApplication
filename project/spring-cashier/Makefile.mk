@@ -22,6 +22,8 @@ jumpbox:
 mysql:
 	docker run -d --network spring-payments --name mysql -td -p 3306:3306 -e MYSQL_ROOT_PASSWORD=cmpe172 mysql:8.0
 
+#docker run -d --network kong-network --name mysql -td -p 3306:3306 -e MYSQL_ROOT_PASSWORD=cmpe172 mysql:8.0
+
 mysql-up:
 	docker-compose up -d mysql
 
@@ -58,6 +60,9 @@ docker-build: build
 
 docker-run:
 	docker run --network spring-payments -e "MYSQL_HOST=mysql" --name spring-cashier -td -p 8080:8080 spring-cashier
+
+#docker run -d --name starbucks-api --network kong-network -td spring-starbucks-api
+#docker run --network kong-network -e "MYSQL_HOST=mysql" --name spring-cashier -td -p 8080:8080 spring-cashier
 
 docker-clean:
 	docker stop spring-cashier
