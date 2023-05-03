@@ -1,5 +1,27 @@
 # CMPE 172 - Lab #8 Notes
 
+## Discussion:
+* Challenges:
+  * Deploying to GKE was a challenge due to this being the first time I have deployed anything to GKE
+  * Errors in the yaml files:
+    * Some of the yaml files required changing of the properties/contents such as deployment.yaml to use our own docker image and kong-ingress-rule.yaml to use a valid apiVersion
+    * Had to figure out which IP address to use to export KONG
+* Changes to use Starbucks API with MySQL:
+  * First, need to use the appropriate application properties file, there is one for mysql
+  * Need to also have a mysql server running on GKE 
+  * Appropriately configure the yaml files to use the mysql server deployed on GKE
+  * Can use jumpbox that we did in this lab to check for issues if the connection does not work
+
+## Deploying Starbucks API with Kong API Gateway in Local Docker <br />
+
+<img width="1440" alt="Screen Shot 2023-04-26 at 11 29 59 AM" src="https://user-images.githubusercontent.com/72158949/234719192-f2e878a0-9ff7-4c22-9a04-4bee677ddead.png">
+<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 20 PM" src="https://user-images.githubusercontent.com/72158949/234719194-06365265-bed0-47f5-812b-6a3037279d9f.png">
+<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 39 PM" src="https://user-images.githubusercontent.com/72158949/234719198-a41d11fc-dd33-4c3e-a3b6-7c81e5d2e655.png">
+<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 47 PM" src="https://user-images.githubusercontent.com/72158949/234719199-05b7495b-f287-4e67-acd5-f2795166e11b.png">
+<img width="1440" alt="Screen Shot 2023-04-26 at 12 32 52 PM" src="https://user-images.githubusercontent.com/72158949/234719202-c53fa48a-50d5-4ffa-8b3a-30f25354c4b6.png">
+
+## Testing GKE with Postman API with Request and Response and API Key Header <br />
+
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 37 16 PM" src="https://user-images.githubusercontent.com/72158949/234719132-4d39edfb-80c5-4ffd-acf6-e31054a34c0b.png">
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 37 26 PM" src="https://user-images.githubusercontent.com/72158949/234719146-ccaa4e96-384c-4243-9f23-4ad77c5a3521.png">
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 37 36 PM" src="https://user-images.githubusercontent.com/72158949/234719151-8842233c-ec6a-4b47-8141-859b7a2d6b00.png">
@@ -12,14 +34,10 @@
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 41 19 PM" src="https://user-images.githubusercontent.com/72158949/234719174-d19c8dd4-4e09-4e88-95d9-f1dd80410dbe.png">
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 41 29 PM" src="https://user-images.githubusercontent.com/72158949/234719180-3591b1ec-fecf-4d94-a8a1-25093010231f.png">
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 41 39 PM" src="https://user-images.githubusercontent.com/72158949/234719184-f3825843-3c58-4624-ac3e-7106eff8aca2.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 3 41 49 PM" src="https://user-images.githubusercontent.com/72158949/234719185-f4eb89bb-1b85-487d-8c0b-66d128e7ac87.png">
 <img width="1440" alt="Screen Shot 2023-04-26 at 3 41 58 PM" src="https://user-images.githubusercontent.com/72158949/234719188-681d710c-ab8d-4c6c-8bfb-4213df3f8a83.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 11 29 59 AM" src="https://user-images.githubusercontent.com/72158949/234719192-f2e878a0-9ff7-4c22-9a04-4bee677ddead.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 20 PM" src="https://user-images.githubusercontent.com/72158949/234719194-06365265-bed0-47f5-812b-6a3037279d9f.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 39 PM" src="https://user-images.githubusercontent.com/72158949/234719198-a41d11fc-dd33-4c3e-a3b6-7c81e5d2e655.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 12 31 47 PM" src="https://user-images.githubusercontent.com/72158949/234719199-05b7495b-f287-4e67-acd5-f2795166e11b.png">
-<img width="1440" alt="Screen Shot 2023-04-26 at 12 32 52 PM" src="https://user-images.githubusercontent.com/72158949/234719202-c53fa48a-50d5-4ffa-8b3a-30f25354c4b6.png">
+<img width="1440" alt="Screen Shot 2023-04-26 at 3 41 49 PM" src="https://user-images.githubusercontent.com/72158949/234719185-f4eb89bb-1b85-487d-8c0b-66d128e7ac87.png">
 
+## Deploy Kong on Google GKE <br />
 
 ![Screenshot 2023-04-26 132224](https://user-images.githubusercontent.com/72158949/234709629-ac9910eb-c21a-4db4-af26-390dbb3db556.png)
 ![Screenshot 2023-04-26 132621](https://user-images.githubusercontent.com/72158949/234709630-7ba68086-5fac-42f5-b27f-d359643cdcc1.png)
