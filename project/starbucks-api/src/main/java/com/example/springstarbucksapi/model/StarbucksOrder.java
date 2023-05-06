@@ -43,6 +43,12 @@ public class StarbucksOrder {
     private String register;
     private String price;
 
+    private boolean active;
+
+    public boolean getActive() { return active; }
+    public void activate() { active = true; }
+    public void clear() { active = false; }
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "card_id", referencedColumnName = "id")
     @JsonIgnore  /* https://www.baeldung.com/jackson-ignore-properties-on-serialization */

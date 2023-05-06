@@ -11,9 +11,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Random;
+// import java.util.HashMap;
+// import java.util.List;
+// import java.util.Random;
+
+import java.util.*;
 
 @Service("StarbucksService")
 public class StarbucksService {
@@ -78,20 +80,38 @@ public class StarbucksService {
         orders.clear();
     }
 
+    public StarbucksOrder findActive(String regid) throws ResponseStatusException {
+        List<StarbucksOrder> orderExist = ordersRepository.findStarbucksOrderByRegister(regid);
+        // StarbucksOrder activeOrder = null;
+        for (StarbucksOrder o : orderExist) {
+            if (o.getActive()) {
+                return o;
+            }
+        }
+        return null;
+    }
+
     /* Create a New Starbucks Order */
     public StarbucksOrder newOrder(String regid, StarbucksOrder order) throws ResponseStatusException {
         System.out.println("Placing Order (Reg ID = " + regid + ") => " + order);
+
+        StarbucksOrder orderExist = findActive(regid);
+
+        if (orderExist != null && orderExist.getActive()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Active Order Exists!");
+        }   
+
         // check input
         if (order.getDrink().equals("") || order.getMilk().equals("") || order.getSize().equals("")) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid Order Request!");
         }
         // check for active order
-        StarbucksOrder active = orders.get(regid);
-        if (active != null) {
-            System.out.println("Active Order (Reg ID = " + regid + ") => " + active);
-            if (active.getStatus().equals("Ready for Payment."))
-                throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Active Order Exists!");
-        }
+        // StarbucksOrder active = orders.get(regid);
+        // if (active != null) {
+        //     System.out.println("Active Order (Reg ID = " + regid + ") => " + active);
+        //     if (active.getStatus().equals("Ready for Payment."))
+        //         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Active Order Exists!");
+        // }
         // set price
         double price = 0.0;
         String drink = order.getDrink();
@@ -187,24 +207,32 @@ public class StarbucksService {
         double total = price + (price * tax);
         double scale = Math.pow(10, 2);
         double rounded = Math.round(total * scale) / scale;
+        order.activate();
         order.setTotal(rounded);
         order.setPrice("$" + rounded);
         // save order
         order.setRegister(regid);
         order.setStatus("Ready for Payment.");
         StarbucksOrder new_order = ordersRepository.save(order);
-        orders.put(regid, new_order);
+        // orders.put(regid, new_order);
         return new_order;
     }
 
     /* Get Details of a Starbucks Order */
     public StarbucksOrder getActiveOrder(String regid) {
+        StarbucksOrder order = findActive(regid);
+        if (order != null) {
+            return order;
+        }
         return orders.get(regid);
     }
 
     /* Clear Active Order */
     public void clearActiveOrder(String regid) {
-        orders.remove(regid);
+        StarbucksOrder active = findActive(regid);
+        active.setStatus("Cleared");
+        active.clear();
+        ordersRepository.save(active);
     }
 
     /*  Process payment for the "active" Order.
@@ -213,7 +241,9 @@ public class StarbucksService {
     @Transactional
     public StarbucksCard processOrder(String regid, String cardnum) throws ResponseStatusException {
         System.out.println("Pay for Order: Reg ID = " + regid + " Using Card = " + cardnum);
-        StarbucksOrder active = orders.get(regid);
+        
+        StarbucksOrder active = findActive(regid);
+
         if (active == null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Order Not Found!");
         }

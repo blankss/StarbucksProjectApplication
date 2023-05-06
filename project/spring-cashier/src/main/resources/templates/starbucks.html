@@ -40,9 +40,7 @@
 <h1 align="center">Welcome to Starbucks Reserved</h1>
 
 <!-- FORM SECTION -->
-<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
-      <input hidden type="submit" value="Sign Out"/>
-</form> 
+<center><a href="/logout">Logout</a></center>
 
 <form name="form" th:object="${command}" method="post" th:action="@{/starbucks}">
 

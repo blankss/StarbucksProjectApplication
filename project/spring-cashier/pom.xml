@@ -18,6 +18,12 @@
 	</properties>
 	<dependencies>
 
+		<!-- Spring Boot Session (JDBC) -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-jdbc</artifactId>
+        </dependency>
+
 		<!-- Manually Added Dependencies -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

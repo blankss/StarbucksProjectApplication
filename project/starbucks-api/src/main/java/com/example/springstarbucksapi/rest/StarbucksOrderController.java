@@ -68,7 +68,7 @@ public class StarbucksOrderController {
     /* Clear Active Order */
     @DeleteMapping("/order/register/{regid}")
     Message deleteActiveOrder(@PathVariable String regid) {
-        StarbucksOrder active = service.getActiveOrder(regid);
+        StarbucksOrder active = service.findActive(regid);
         if (active != null) {
             service.clearActiveOrder(regid);
             Message msg = new Message();

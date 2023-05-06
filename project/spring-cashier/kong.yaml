@@ -3,8 +3,8 @@ _format_version: "1.1"
 services:
 - name: starbucks
   protocol: http
-  host: starbucks-api
-  port: 8080
+  host: starbucks-lb
+  port: 5000
   path: /
   plugins:
   - name: key-auth  

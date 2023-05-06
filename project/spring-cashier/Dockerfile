@@ -1,4 +1,4 @@
 FROM openjdk:11
-EXPOSE 8080
+EXPOSE 8085
 ADD ./target/spring-cashier-1.0.jar /srv/spring-cashier-1.0.jar
 CMD java -jar /srv/spring-cashier-1.0.jar

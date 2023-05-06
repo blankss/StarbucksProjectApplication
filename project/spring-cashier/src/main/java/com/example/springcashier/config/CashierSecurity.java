@@ -47,7 +47,7 @@ public class CashierSecurity {
 
         http.authorizeRequests()
             // URL matching for accessibility
-            .antMatchers("/", "/login", "/register", "/h2-console/**", "/css/**", "/js/**", "/images/**").permitAll()
+            .antMatchers("/", "/login", "/register", "/h2-console/**", "/css/**", "/js/**", "/images/**", "/logout").permitAll()
             //.antMatchers("/user/**").hasAnyAuthority("USER")
             .antMatchers("/users").authenticated()
             //.anyRequest().authenticated()
@@ -67,7 +67,8 @@ public class CashierSecurity {
             .and()
             // logout
             .logout()
-            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+            // logout.permitAll()
+            .logoutUrl("logout")
             .logoutSuccessUrl("/")
             .and()
             .exceptionHandling()

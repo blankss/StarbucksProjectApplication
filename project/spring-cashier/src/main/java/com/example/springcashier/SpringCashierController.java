@@ -1,6 +1,5 @@
 package com.example.springcashier;
 
-
 import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.validation.BindingResult;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Value;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpEntity;
@@ -54,7 +54,8 @@ public class SpringCashierController {
         return res;
 
    }
-
+    @Value("${starbucks.client.apikey}") String API_KEY ;
+    @Value("${starbucks.client.apihost}") String API_HOST ;
     @GetMapping
     public String getAction( @ModelAttribute("command") Command command, 
                             Model model) {
@@ -97,14 +98,14 @@ public class SpringCashierController {
         String resourceUrl = "";
 
         //IP Address
-        String ip = "http://10.0.0.77:80/api/";
+        String ip = "http://" + API_HOST;
         //api key
-        String apiKey = "2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ";
+        // String apiKey = "2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ";
         RestTemplate restTemplate = new RestTemplate();
 
         if ( action.equals("Place Order") ) {
 
-            resourceUrl = ip + "order/register/" + command.getRegister() + "?apikey=" + apiKey;
+            resourceUrl = ip + "order/register/" + command.getRegister() + "?apikey=" + API_KEY;
             // get response as POJO
             OrderModel order = new OrderModel() ;
             order.setDrink(command.getDrink());
@@ -113,23 +114,12 @@ public class SpringCashierController {
             order.setStatus("Ready for Payment");
             order.setRegister( command.getRegister() ) ;
             // order.setPrice(priceCalculation(order.getDrink(), order.getSize()));
-            HttpEntity<OrderModel> newOrderRequest = new HttpEntity<OrderModel>(order) ;
-            ResponseEntity<OrderModel> newOrderResponse = restTemplate.postForEntity(resourceUrl, newOrderRequest, OrderModel.class);
-            OrderModel newOrder = newOrderResponse.getBody();
 
-            // message = "Starbucks Reserved Order" + "\n\n" +
-            //     "Drink: " + order.getDrink() + "\n" +
-            //     "Milk:  " + order.getMilk() + "\n" +
-            //     "Size:  " + order.getSize() + "\n" +
-            //     "Total: " + order.getPrice() + "\n" +
-            //     "\n" +
-            //     "Register: " + order.getRegister() + "\n" +
-            //     "Status:   " + order.getStatus() + "\n" ;
-            // mysql.save(order);
-
-            System.out.println( newOrder );
             // pretty print JSON
             try {
+                HttpEntity<OrderModel> newOrderRequest = new HttpEntity<OrderModel>(order) ;
+                ResponseEntity<OrderModel> newOrderResponse = restTemplate.postForEntity(resourceUrl, newOrderRequest, OrderModel.class);
+                OrderModel newOrder = newOrderResponse.getBody();
                 ObjectMapper objectMapper = new ObjectMapper() ;
                 String jsonString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(newOrder);
                 System.out.println( jsonString) ;
@@ -140,20 +130,41 @@ public class SpringCashierController {
                 System.out.println(price);
                 message = "\n" + res ;
             }
-            catch ( Exception e ) {}
+            catch ( Exception e ) {
+                message = "Starbucks Reserved Order" + "\n\n" +
+                    "Register: " + command.getRegister() + "\n" +
+                    "Status:   " + "ACtive Order Exists"+ "\n" ;
+            }
         }
         else if ( action.equals("Get Order") ) {
-            resourceUrl = ip + "order/register/" + command.getRegister() +"?apikey=" + apiKey;
+            resourceUrl = ip + "order/register/" + command.getRegister() +"?apikey=" + API_KEY;
+            // resourceUrl = ip + "ping/?apikey=" + API_KEY;
             // get response as string
-            ResponseEntity<String> stringResponse = restTemplate.getForEntity(resourceUrl, String.class);
-            message = stringResponse.getBody();
-        } 
-        else if ( action.equals("Clear Order") ) {
-            resourceUrl = ip + "order/register/" + command.getRegister() + "?apikey=" + apiKey;
-            restTemplate.delete(resourceUrl);
-            message = "Starbucks Reserved Order" + "\n\n" +
+            try {
+                ResponseEntity<String> stringResponse = restTemplate.getForEntity(resourceUrl, String.class);
+                message = stringResponse.getBody();
+            }
+            catch (Exception e) {
+                message = "Starbucks Reserved Order" + "\n\n" +
                     "Register: " + command.getRegister() + "\n" +
                     "Status:   " + "Ready for New Order"+ "\n" ;
+            }
+            
+        } 
+        else if ( action.equals("Clear Order") ) {
+            resourceUrl = ip + "order/register/" + command.getRegister() + "?apikey=" + API_KEY;
+            restTemplate.delete(resourceUrl);
+            try {
+                message = "Starbucks Reserved Order" + "\n\n" +
+                    "Register: " + command.getRegister() + "\n" +
+                    "Status:   " + "Ready for New Order"+ "\n" ;
+            }
+            catch (Exception e) {
+                message = "Starbucks Reserved Order" + "\n\n" +
+                    "Register: " + command.getRegister() + "\n" +
+                    "Status:   " + "No Active Order to Clear"+ "\n" ;
+            }
+            
             // if (activeOrder == null) {
             //     message = "Starbucks Reserved Order" + "\n\n" +
             //         "Register: " + command.getRegister() + "\n" +
