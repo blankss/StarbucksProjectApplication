@@ -233,3 +233,17 @@
 
 ## Get Nonexistent Order with API Call
 <img width="1440" alt="Screen Shot 2023-05-01 at 2 44 11 PM" src="https://user-images.githubusercontent.com/72158949/235539233-9455a9ef-3cdd-41ae-ab14-b7f9d1b8cb8b.png">
+
+## Ninth Journal Entry - 5/6
+### Accomplished:
+### Tasks to Accomplish:
+
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 13 37 PM" src="https://user-images.githubusercontent.com/72158949/236650197-308d60e2-3fe5-47c3-81eb-ed279f19ea0e.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 14 58 PM" src="https://user-images.githubusercontent.com/72158949/236650198-2c1dc730-50d6-4296-bd07-3585b11161c0.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 15 36 PM" src="https://user-images.githubusercontent.com/72158949/236650199-591cd4ee-70b6-4f80-b25b-4eb236289994.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 15 53 PM" src="https://user-images.githubusercontent.com/72158949/236650200-67e70a6b-36b5-48db-b5ff-c2f4ba993b14.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 16 54 PM" src="https://user-images.githubusercontent.com/72158949/236650202-80363c1e-3fc2-45e4-811f-374f65634991.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 17 44 PM" src="https://user-images.githubusercontent.com/72158949/236650203-722a0775-f966-446c-8a63-e347c2c98239.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 17 52 PM" src="https://user-images.githubusercontent.com/72158949/236650205-37d42b1b-2473-4367-af4f-72459ffff12e.png">
+<img width="1435" alt="Screen Shot 2023-05-06 at 4 18 01 PM" src="https://user-images.githubusercontent.com/72158949/236650206-9f9d5a84-4f0b-4322-a775-fd02858525db.png">
+
