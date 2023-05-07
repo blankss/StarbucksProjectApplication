@@ -236,14 +236,39 @@
 
 ## Ninth Journal Entry - 5/6
 ### Accomplished:
-### Tasks to Accomplish:
+* Load balanced both spring cashier and starbucks api
+* Removed redis and used jdbc since we would need to do this on GKE to circumvent problems according to the professor
+* Configured StarbucksOrderRepository to have a method of findStarbucksOrderByRegister to find active orders in a register
+* Edited StarbucksOrderController and StarbucksService to use the method in the previous bulletpoint to find the active order in the database instead of the HashMap
+* Used try-catch block in SpringCashierController to catch HTTP errors thrown by service and order controller to not cause a Whitelabel Error and instead display a message
+* Added logout link in starbucks
 
+### Tasks to Accomplish:
+* Logout currently displays 404, need to look into why Spring Security is not generating the logout page
+* Implement RabbitMQ for async 
+* Eventually deploy to GKE
+
+## Command Line and Starbucks Mobile App Running
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 13 37 PM" src="https://user-images.githubusercontent.com/72158949/236650197-308d60e2-3fe5-47c3-81eb-ed279f19ea0e.png">
+
+## Docker Desktop with Compose Stack
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 14 58 PM" src="https://user-images.githubusercontent.com/72158949/236650198-2c1dc730-50d6-4296-bd07-3585b11161c0.png">
+
+## Logged in and Placed Order through Kong API 
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 15 36 PM" src="https://user-images.githubusercontent.com/72158949/236650199-591cd4ee-70b6-4f80-b25b-4eb236289994.png">
+
+## Getting Order through Kong API
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 15 53 PM" src="https://user-images.githubusercontent.com/72158949/236650200-67e70a6b-36b5-48db-b5ff-c2f4ba993b14.png">
+
+## Paid for Order with Card
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 16 54 PM" src="https://user-images.githubusercontent.com/72158949/236650202-80363c1e-3fc2-45e4-811f-374f65634991.png">
+
+## Clear Order
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 17 44 PM" src="https://user-images.githubusercontent.com/72158949/236650203-722a0775-f966-446c-8a63-e347c2c98239.png">
+
+## Get Order with no Active Order
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 17 52 PM" src="https://user-images.githubusercontent.com/72158949/236650205-37d42b1b-2473-4367-af4f-72459ffff12e.png">
+
+## MySQL Database after Clearing
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 18 01 PM" src="https://user-images.githubusercontent.com/72158949/236650206-9f9d5a84-4f0b-4322-a775-fd02858525db.png">
 
