@@ -1,6 +1,7 @@
 # CMPE 172 Project Journal
 
 ## First Journal Entry - 3/15
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/5ddcc1c2f35f7e290504aee578c26247b7ff4452
 ### Accomplished:
 * Created spring-cashier folder with necessary dependencies from Spring
 * Created controller for spring-cashier to handle the homepage for the Starbucks cashier app
@@ -22,6 +23,7 @@
 <img width="1440" alt="Screen Shot 2023-03-15 at 3 35 17 PM" src="https://user-images.githubusercontent.com/72158949/225459166-b798e834-6691-42e2-99f5-61f722807115.png">
 
 ## Second Journal Entry - 3/20
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/a9fc0cdaad0ef30f0fcb16df3a2c0bc1179a4c2c
 ### Accomplished:
 * Implemented basic security features as seen in security lab with Spring Security
 * Implemented Sign Out button 
@@ -47,6 +49,7 @@
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 46 14 PM" src="https://user-images.githubusercontent.com/72158949/226441827-64eff7db-e864-4c42-aeb0-2a835d4a920d.png">
 
 ## Third Journal Entry - 4/2
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/0699698bed0d4764d6c8d0f714f6571c07df68d8
 ### Accomplished:
 * Temporarily only have one button press to process the payment for the drink order
 * Drink order persists in the order_model table in the cmpe172 table
@@ -61,6 +64,7 @@
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 11 59 PM" src="https://user-images.githubusercontent.com/72158949/229384164-5e04940f-338e-4864-849c-b5025c0416a9.png">
 
 ## Fourth Journal Entry - 4/9
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/6244a0129c51acf03606af013d9dbac0455e7fb3
 ### Accomplished:
 * Scale back and decided to implement the other functionalities of the buttons (Get, Place, and Clear) first
   * These features are fully functioning -> need to refactor for REST API capabilities since everything is in the PostAction right now
@@ -92,6 +96,7 @@
 <img width="1440" alt="Screen Shot 2023-04-09 at 6 06 59 PM" src="https://user-images.githubusercontent.com/72158949/230806274-83d5ba71-7eff-4bd3-ad07-50b5c0a691d4.png">
 
 ## Fifth Journal Entry - 4/16
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/9d97fa136c62267b9ca4a1cd8a042f308e10b86d
 ### Accomplished:
 * Removed sticky sessions by adding Spring Session and Redis
 * Implemented all 3 functionalities (Get, Place, and Clear Order)
@@ -133,6 +138,7 @@
 <img width="1440" alt="Screen Shot 2023-04-16 at 3 59 44 PM" src="https://user-images.githubusercontent.com/72158949/232347915-e2b66f29-d347-428e-b817-2f4370a696fd.png">
 
 ## Sixth Journal Entry - 4/17
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/1cc063faa3c608200d93f10911e6310dedd00a96
 ### Accomplished:
 * Added registration html page
 * Basic authorization files added
@@ -162,6 +168,7 @@
 <img width="1440" alt="Screen Shot 2023-04-17 at 4 40 38 PM" src="https://user-images.githubusercontent.com/72158949/232635057-6ec12faf-87ae-4ec5-91f7-bf14e23e2d32.png">
 
 ## Seventh Journal Entry - 4/19
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/a5e849861a69a6c1c78d4d95104094647fa1e8ce
 ### Accomplished:
 * Completed registration of a new user for starbucks cashier
   * Password is hashed in database
@@ -205,6 +212,7 @@
 <img width="1440" alt="Screen Shot 2023-04-19 at 3 07 23 PM" src="https://user-images.githubusercontent.com/72158949/233211125-2f525a71-1b11-450a-ae01-879b03a1c4aa.png">
 
 ## Eighth Journal Entry - 5/1
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/ad64bd7fad02529b75149cc493745d7b57df9573
 ### Accomplished:
 * Used starbucks-api and kong gateway for the application instead of previous way
 * Implemented Get Order, Place Order, and Clear Order functionalities with kong and starbucks-api
@@ -235,6 +243,7 @@
 <img width="1440" alt="Screen Shot 2023-05-01 at 2 44 11 PM" src="https://user-images.githubusercontent.com/72158949/235539233-9455a9ef-3cdd-41ae-ab14-b7f9d1b8cb8b.png">
 
 ## Ninth Journal Entry - 5/6
+### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/34bd805eb3af20f4b8f5882a64b9d225ea6456d4
 ### Accomplished:
 * Load balanced both spring cashier and starbucks api
 * Removed redis and used jdbc since we would need to do this on GKE to circumvent problems according to the professor
@@ -271,4 +280,9 @@
 
 ## MySQL Database after Clearing
 <img width="1435" alt="Screen Shot 2023-05-06 at 4 18 01 PM" src="https://user-images.githubusercontent.com/72158949/236650206-9f9d5a84-4f0b-4322-a775-fd02858525db.png">
+
+## Tenth Journal Entry - 5/10
+### Commit:
+### Accomplished:
+### Remaining Tasks Before Demo:
 
