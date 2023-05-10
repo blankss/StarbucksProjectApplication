@@ -1,7 +1,8 @@
 # CMPE 172 Project Journal
 
 ## First Journal Entry - 3/15
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/5ddcc1c2f35f7e290504aee578c26247b7ff4452
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/5ddcc1c2f35f7e290504aee578c26247b7ff4452
 ### Accomplished:
 * Created spring-cashier folder with necessary dependencies from Spring
 * Created controller for spring-cashier to handle the homepage for the Starbucks cashier app
@@ -23,7 +24,8 @@
 <img width="1440" alt="Screen Shot 2023-03-15 at 3 35 17 PM" src="https://user-images.githubusercontent.com/72158949/225459166-b798e834-6691-42e2-99f5-61f722807115.png">
 
 ## Second Journal Entry - 3/20
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/a9fc0cdaad0ef30f0fcb16df3a2c0bc1179a4c2c
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/a9fc0cdaad0ef30f0fcb16df3a2c0bc1179a4c2c
 ### Accomplished:
 * Implemented basic security features as seen in security lab with Spring Security
 * Implemented Sign Out button 
@@ -49,7 +51,8 @@
 <img width="1440" alt="Screen Shot 2023-03-19 at 3 46 14 PM" src="https://user-images.githubusercontent.com/72158949/226441827-64eff7db-e864-4c42-aeb0-2a835d4a920d.png">
 
 ## Third Journal Entry - 4/2
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/0699698bed0d4764d6c8d0f714f6571c07df68d8
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/0699698bed0d4764d6c8d0f714f6571c07df68d8
 ### Accomplished:
 * Temporarily only have one button press to process the payment for the drink order
 * Drink order persists in the order_model table in the cmpe172 table
@@ -64,7 +67,8 @@
 <img width="1440" alt="Screen Shot 2023-04-02 at 4 11 59 PM" src="https://user-images.githubusercontent.com/72158949/229384164-5e04940f-338e-4864-849c-b5025c0416a9.png">
 
 ## Fourth Journal Entry - 4/9
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/6244a0129c51acf03606af013d9dbac0455e7fb3
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/6244a0129c51acf03606af013d9dbac0455e7fb3
 ### Accomplished:
 * Scale back and decided to implement the other functionalities of the buttons (Get, Place, and Clear) first
   * These features are fully functioning -> need to refactor for REST API capabilities since everything is in the PostAction right now
@@ -96,7 +100,8 @@
 <img width="1440" alt="Screen Shot 2023-04-09 at 6 06 59 PM" src="https://user-images.githubusercontent.com/72158949/230806274-83d5ba71-7eff-4bd3-ad07-50b5c0a691d4.png">
 
 ## Fifth Journal Entry - 4/16
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/9d97fa136c62267b9ca4a1cd8a042f308e10b86d
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/9d97fa136c62267b9ca4a1cd8a042f308e10b86d
 ### Accomplished:
 * Removed sticky sessions by adding Spring Session and Redis
 * Implemented all 3 functionalities (Get, Place, and Clear Order)
@@ -138,7 +143,8 @@
 <img width="1440" alt="Screen Shot 2023-04-16 at 3 59 44 PM" src="https://user-images.githubusercontent.com/72158949/232347915-e2b66f29-d347-428e-b817-2f4370a696fd.png">
 
 ## Sixth Journal Entry - 4/17
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/1cc063faa3c608200d93f10911e6310dedd00a96
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/1cc063faa3c608200d93f10911e6310dedd00a96
 ### Accomplished:
 * Added registration html page
 * Basic authorization files added
@@ -168,7 +174,8 @@
 <img width="1440" alt="Screen Shot 2023-04-17 at 4 40 38 PM" src="https://user-images.githubusercontent.com/72158949/232635057-6ec12faf-87ae-4ec5-91f7-bf14e23e2d32.png">
 
 ## Seventh Journal Entry - 4/19
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/a5e849861a69a6c1c78d4d95104094647fa1e8ce
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/a5e849861a69a6c1c78d4d95104094647fa1e8ce
 ### Accomplished:
 * Completed registration of a new user for starbucks cashier
   * Password is hashed in database
@@ -212,7 +219,8 @@
 <img width="1440" alt="Screen Shot 2023-04-19 at 3 07 23 PM" src="https://user-images.githubusercontent.com/72158949/233211125-2f525a71-1b11-450a-ae01-879b03a1c4aa.png">
 
 ## Eighth Journal Entry - 5/1
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/ad64bd7fad02529b75149cc493745d7b57df9573
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/ad64bd7fad02529b75149cc493745d7b57df9573
 ### Accomplished:
 * Used starbucks-api and kong gateway for the application instead of previous way
 * Implemented Get Order, Place Order, and Clear Order functionalities with kong and starbucks-api
@@ -243,7 +251,8 @@
 <img width="1440" alt="Screen Shot 2023-05-01 at 2 44 11 PM" src="https://user-images.githubusercontent.com/72158949/235539233-9455a9ef-3cdd-41ae-ab14-b7f9d1b8cb8b.png">
 
 ## Ninth Journal Entry - 5/6
-### Commit: https://github.com/nguyensjsu/cmpe172-blankss/commit/34bd805eb3af20f4b8f5882a64b9d225ea6456d4
+### Commit: 
+https://github.com/nguyensjsu/cmpe172-blankss/commit/34bd805eb3af20f4b8f5882a64b9d225ea6456d4
 ### Accomplished:
 * Load balanced both spring cashier and starbucks api
 * Removed redis and used jdbc since we would need to do this on GKE to circumvent problems according to the professor
@@ -284,5 +293,39 @@
 ## Tenth Journal Entry - 5/10
 ### Commit:
 ### Accomplished:
+* Fixed logout routing
+* Paying the order now deactivates the order from the register, which makes it so the next order can come into the register
+* Implemented RabbitMQ
+  * Two workers so two consumers
+  * Thread sleep 60000 simulates busy work to delay the status from being changed to "Currently making drink..." to "FULFILLED" so that we can see the change in the database 
+* Configured most of the yaml files for deployment on GKE
+  * Based yaml files off of professor's yaml files in lab8 and spring-gumball v3.5
+* Added StarbucksDrink model
+  * Fulfills requirement of querying status of the drink (not order) after being paid 
+  * Added necessary MySQL components to drink to make it work in the database (repository, controller, etc.)
+* Added StarbucksWorker to process the order
+  * Made RabbitMQ queue named "starbucks"
 ### Remaining Tasks Before Demo:
+* Deploy on GKE
+* Change HTML title page to reflect starbucks and not gumball
+
+## Starbucks Cashier Page has logout functionality
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 12 08 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/c027a83a-ddcd-48eb-9f59-13fb4f1336f2">
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 12 19 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/475d6b3a-8c67-4ccf-bfcb-0c1ee6f20f10">
+
+## Making New Cards into the database
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 13 50 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/a7f72f65-30b2-4134-a5ae-c4c1efba40e6">
+
+## Paid with card deactivates order and transitions it to the drink table for processing from worker
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 16 05 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/fe4dae74-37be-4d95-9b01-d19392fe876a">
+
+## Waiting for worker to fulfill drink
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 16 30 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/7fd3d5cf-a857-4a71-95ea-82cf27db8ad3">
+
+## RabbitMQ Console of the queue
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 16 36 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/2df4cf45-534e-4a86-9083-66447607c714">
+
+## Extra screenshot for status of drinks
+<img width="1440" alt="Screen Shot 2023-05-10 at 12 16 53 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/c45071de-5441-43ce-a64e-4ee8fae284e6">
+
 
