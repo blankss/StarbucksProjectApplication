@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starbucks-cashier-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      name: spring-cashier
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      # unlike pod.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        name: spring-cashier
+    spec:
+      containers:
+      - name: spring-cashier
+        image: blankss/spring-cashier:latest
+        env:
+          - name: MYSQL_HOST
+            value: ""
+          - name: MYSQL_USERNAME
+            value: "happy"
+          - name: MYSQL_PASSWORD
+            value: "camper"
+          - name: MYSQL_SCHEMA
+            value: "cashier"
+          - name: API_HOST
+            value: "<API_HOST>" 
+          - name: API_KEY
+            value: "default"
+        ports:
+        - containerPort: 8085

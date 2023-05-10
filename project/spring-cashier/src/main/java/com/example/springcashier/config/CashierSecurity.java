@@ -47,7 +47,7 @@ public class CashierSecurity {
 
         http.authorizeRequests()
             // URL matching for accessibility
-            .antMatchers("/", "/login", "/register", "/h2-console/**", "/css/**", "/js/**", "/images/**", "/logout").permitAll()
+            .antMatchers("/", "/login.css", "/login" , "/register", "/h2-console/**", "/images/**", "/logout").permitAll()
             //.antMatchers("/user/**").hasAnyAuthority("USER")
             .antMatchers("/users").authenticated()
             //.anyRequest().authenticated()
@@ -68,8 +68,8 @@ public class CashierSecurity {
             // logout
             .logout()
             // logout.permitAll()
-            .logoutUrl("logout")
-            .logoutSuccessUrl("/")
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+            .logoutSuccessUrl("/login")
             .and()
             .exceptionHandling()
             .accessDeniedPage("/access-denied");
@@ -97,16 +97,4 @@ public class CashierSecurity {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
     }
-
-    // @Bean
-    // public UserDetailsService userDetailsService() {
-    //     UserDetails user =
-    //         User.withDefaultPasswordEncoder()
-    //                 .username("user")
-    //                 .password("password")
-    //                 .roles("USER")
-    //                 .build();
-
-    //     return new InMemoryUserDetailsManager(user);
-    // }
 }

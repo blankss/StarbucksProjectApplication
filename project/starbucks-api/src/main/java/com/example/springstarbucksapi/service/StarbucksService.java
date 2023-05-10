@@ -2,14 +2,20 @@ package com.example.springstarbucksapi.service;
 
 import com.example.springstarbucksapi.model.StarbucksCard;
 import com.example.springstarbucksapi.model.StarbucksOrder;
+import com.example.springstarbucksapi.model.StarbucksDrink;
 import com.example.springstarbucksapi.repository.StarbucksCardRepository;
 import com.example.springstarbucksapi.repository.StarbucksOrderRepository;
+import com.example.springstarbucksapi.repository.StarbucksDrinkRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.UUID;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 // import java.util.HashMap;
 // import java.util.List;
@@ -23,8 +29,27 @@ public class StarbucksService {
     // REF: https://www.moreofless.co.uk/spring-mvc-java-autowired-component-null-repository-service
     @Autowired private StarbucksOrderRepository ordersRepository;
     @Autowired private StarbucksCardRepository cardsRepository;
+    @Autowired private StarbucksDrinkRepository drinksRepository;
+
+    @Autowired
+    private RabbitTemplate rabbit;
+
+    @Autowired
+    private Queue queue;
 
     /* https://docs.spring.io/spring-data/jpa/docs/2.4.5/api/ */
+
+    /* Fetch Drink status */
+    public StarbucksDrink getStatus(String orderNum) {
+        List<StarbucksDrink> list = drinksRepository.findStarbucksDrinkByOrderNum( orderNum ) ;
+        if ( !list.isEmpty() ) {
+            StarbucksDrink drink = list.get(0) ;
+            return drink;
+        } 
+        else {
+            return null;
+        } 
+    }
 
     /* Create a New Starbucks Card */
     public StarbucksCard newCard() {
@@ -209,7 +234,7 @@ public class StarbucksService {
         double rounded = Math.round(total * scale) / scale;
         order.activate();
         order.setTotal(rounded);
-        order.setPrice("$" + rounded);
+        order.setPrice("$" + price);
         // save order
         order.setRegister(regid);
         order.setStatus("Ready for Payment.");
@@ -266,13 +291,25 @@ public class StarbucksService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Insufficient Funds on Card.");
         }
 
+
         double new_balance = balance - price;
         card.setBalance(new_balance);
         String status = "Paid with Card: " + cardnum + " Balance: $" + new_balance + ".";
         active.setStatus(status);
+        active.clear();
         cardsRepository.save(card);
         active.setCard(card);
         ordersRepository.save(active);
+
+        StarbucksDrink drink = new StarbucksDrink(active);
+        drink.setStatus("Currently making drink...");
+        String orderNum = UUID.randomUUID().toString();
+        drink.setOrderNum(orderNum);
+        drinksRepository.save(drink);
+
+        rabbit.convertAndSend(queue.getName(), orderNum);
+
+
         return card;
     }
 

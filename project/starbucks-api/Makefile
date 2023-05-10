@@ -22,6 +22,20 @@ run-test: build
 	java -jar target/spring-starbucks-api-3.1.jar --spring.profiles.active=test
 
 
+#Rabbit
+rabbit:
+	docker run --name rabbitmq \
+	           --network spring-payments \
+			   -p 9090:15672 -p 4369:4369 -p 5672:5672 \
+			   -d rabbitmq:3-management
+
+rabbit-console:
+	open http://localhost:9090
+
+# Management Console: http://localhost:9090
+# username and password of guest / guest:
+
+
 
 # MySQL DB
 

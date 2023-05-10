@@ -133,7 +133,7 @@ public class SpringCashierController {
             catch ( Exception e ) {
                 message = "Starbucks Reserved Order" + "\n\n" +
                     "Register: " + command.getRegister() + "\n" +
-                    "Status:   " + "ACtive Order Exists"+ "\n" ;
+                    "Status:   " + "Active Order Exists"+ "\n" ;
             }
         }
         else if ( action.equals("Get Order") ) {

@@ -1,5 +1,4 @@
 # docker-compose up --scale cashier=2 -d
-# should both lb ports be the same
 version: "3"
 
 services:
@@ -11,7 +10,36 @@ services:
   #   ports:
   #     - 6379
   #   hostname: cmpe172cashier
-  #   restart: always   
+  #   restart: always
+  rabbit:
+    image: rabbitmq:3-management
+    platform: linux/amd64
+    ports:
+      - "9090:15672"
+      - "4369:4369"
+      - "5672:5672"
+    networks:
+      - network  
+    restart: always
+  worker:
+    image: starbucks-worker
+    platform: linux/amd64
+    depends_on:
+      - mysql
+      - rabbit
+    networks:
+      - network
+    environment:
+      MYSQL_HOST: "mysql"
+      MYSQL_USERNAME: "root"
+      MYSQL_PASSWORD: "cmpe172"
+      RABBIT_HOST: "rabbit"
+      RABBIT_USERNAME: "guest"
+      RABBIT_PASSWORD: "guest"
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 2 
   mysql:
     image: mysql:8.0
     platform: linux/amd64
@@ -31,6 +59,7 @@ services:
     platform: linux/amd64
     depends_on:
       - mysql
+      - rabbit
     networks:
       - network
     ports:
@@ -40,6 +69,9 @@ services:
       MYSQL_USER: "root"
       MYSQL_PASS: "cmpe172"
       MYSQL_SCHEMA: "starbucks"
+      RABBIT_HOST: "rabbit"
+      RABBIT_USERNAME: "guest"
+      RABBIT_PASSWORD: "guest"
     restart: always
     deploy:
       mode: replicated
