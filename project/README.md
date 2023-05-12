@@ -292,9 +292,9 @@ https://github.com/nguyensjsu/cmpe172-blankss/commit/34bd805eb3af20f4b8f5882a64b
 
 ## Tenth Journal Entry - 5/10
 ### Commit:
+https://github.com/nguyensjsu/cmpe172-blankss/commit/b1775a58d5152a728574ddf729051eab8d5f0731
 ### Accomplished:
 * Fixed logout routing
-* Paying the order now deactivates the order from the register, which makes it so the next order can come into the register
 * Implemented RabbitMQ
   * Two workers so two consumers
   * Thread sleep 60000 simulates busy work to delay the status from being changed to "Currently making drink..." to "FULFILLED" so that we can see the change in the database 
