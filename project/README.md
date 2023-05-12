@@ -1,4 +1,15 @@
 # CMPE 172 Project Journal
+This section addresses the discussion and questions in the GKE demo assignment. Basically, this section is reserved for the discussion of the final product deployed on GKE.
+
+## Screenshots
+### Cashier
+### Starbucks API
+### Cloud Deployments
+1. Design Notes on GitHub an Architecture Diagram of the overall Deployment.
+2. How does your Solution Scale? Can it handle > 1 Million Mobile Devices? Explain.
+
+# CMPE 172 Weekly Journals
+This section is the 10 "weekly" journals of the progress I had during every journal entry.
 
 ## First Journal Entry - 3/15
 ### Commit: 
