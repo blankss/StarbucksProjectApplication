@@ -34,15 +34,20 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 
 ### Scalable Cloud Deployment on GCP  (25 points)
 - External Load Balancer as Ingress for Cashier's App (10 points)
- 
+ <img width="1440" alt="Screen Shot 2023-05-13 at 3 06 18 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/a6b24dd2-a8de-4bef-9708-18ec039cb380">
 - Internal Load Balancer for Starbucks API behind Kong API Gateway (15 points)
+<img width="1440" alt="Screen Shot 2023-05-13 at 3 06 38 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/ebe4e601-567d-4692-a43a-b13fcc20d4e2">
 
 ### Implementation Uses Required Cloud Databases (25 points)
 - MySQL Database 8.0 (15 points)
+    <img width="1440" alt="Screen Shot 2023-05-13 at 3 07 10 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/8068e5ce-f45c-4496-bf92-6fb55c4ef836">
 - Must use Cloud SQL (MySQL Option)
+    - Refer to above screenshot of deploying Cloud MySQL
 - Update Starbucks API to use JPA with MySQL
 - RabbitMQ (10 points)
+    <img width="1440" alt="Screen Shot 2023-05-13 at 3 07 44 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/7e784c71-866d-4e7e-9d7b-01d71d098053">
 - Must use GKE RabbitMQ Operator
+    - Refer to above screenshot with RabbitMQ in the Workloads using the professor's markdown to deploy
 - Extend the Starbucks API to support async order processing (to use RabbitMQ)
 
 ### Starbucks API for Mobile App and Store Front (25 points)
