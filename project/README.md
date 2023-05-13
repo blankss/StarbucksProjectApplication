@@ -35,6 +35,9 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 ### Scalable Cloud Deployment on GCP  (25 points)
 - External Load Balancer as Ingress for Cashier's App (10 points)
  <img width="1440" alt="Screen Shot 2023-05-13 at 3 06 18 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/a6b24dd2-a8de-4bef-9708-18ec039cb380">
+ 
+ <br />
+ 
 - Internal Load Balancer for Starbucks API behind Kong API Gateway (15 points)
 <img width="1440" alt="Screen Shot 2023-05-13 at 3 06 38 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/ebe4e601-567d-4692-a43a-b13fcc20d4e2">
 
