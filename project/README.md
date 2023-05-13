@@ -6,7 +6,58 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 ### Starbucks API
 ### Cloud Deployments
 1. Design Notes on GitHub an Architecture Diagram of the overall Deployment.
-2. How does your Solution Scale? Can it handle > 1 Million Mobile Devices? Explain.
+2. How does your Solution Scale? Can it handle > 1 Million Mobile Devices? Explain. <br />
+    My solution scales similarly to horizontal scaling in which multiple instances of each resource can be brought up to deal with an increase in traffic. The resources to scale would be the number of cashiers, api's, and workers. Since these resources are located behind a load balancer, the load balancer would take on the role of splitting up the traffic to be routed to available backends. In this way, the solution should be able to handle > 1 million mobile devices through scaling the resources in the GKE horizontally by adding more deployments/replicas of cashiers, api's, and workers as stated previously. If we disregard the limitations of the current implementation such as starbucks-app only having 1 register, cost, and spring-cashier only having 5 registers with a max of 1 active order per register, the horizontal scaling should be enough to handle a large amount of traffic.
+
+**NOTE:** Upon approval from the professor, students can just refer to the journal section for the earliest fulfillment of the technical requirements without needing to screenshot more if it is already in the journal. These technical requirements can also be seen to be fulfilled on GKE as well during the demo video.
+
+## Technical Requirements
+### Cashier's App (25 points)
+- Port Node.js App to Spring MVC (required)
+  - Refer to journal 5 for completed Spring Cashier
+- Web rendering must be done in View Templates
+  - Refer to journal 7 for completed Spring Cashier view templates (register, login, etc) 
+- Controller must process JSON responses from API and pass to View via Models
+  -  Refer to journal 8 for getting JSON responses from API, I have also parsed the information from the JSON and formatted it a bit in the latest version of my controller in cashier
+- Output and "Look and Feel" of Web UI must match that of Node.js App
+  - Refer to journal 7 for UI of templates 
+- Implementation must not just use Rest Client example code (from instructor) as-is
+  - Implementation of Cashier's App does not use starbucks-client
+- Support Admin Logins for Starbucks Employees (5 points)
+ - Refer to journal 7 for correct implementation of registration and login
+- Must not store credentials in memory or hard code in source code
+ - Refer to journal 7, dynamically create the user on registration
+- Should also include New Account Registration and Logout
+ - Refer to journal 7 for creation of user during runtime
+- Support In Store Order Processing (20 points -- See Diagram Below)
+ - Refer to journal 10 for the fulfillment of the UML diagram (placing of the order to payment processing)
+
+### Scalable Cloud Deployment on GCP  (25 points)
+- External Load Balancer as Ingress for Cashier's App (10 points)
+ 
+- Internal Load Balancer for Starbucks API behind Kong API Gateway (15 points)
+
+### Implementation Uses Required Cloud Databases (25 points)
+- MySQL Database 8.0 (15 points)
+- Must use Cloud SQL (MySQL Option)
+- Update Starbucks API to use JPA with MySQL
+- RabbitMQ (10 points)
+- Must use GKE RabbitMQ Operator
+- Extend the Starbucks API to support async order processing (to use RabbitMQ)
+
+### Starbucks API for Mobile App and Store Front (25 points)
+- Deployed with Kong API Gateway with API Key Authentication (10 points)
+
+- Implement RabbitMQ Check Order Status for "Drinks Available" (15 Points)
+
+- Async Request API to "Make the Drink" once Order has been Paid (i.e. put request into a Queue)
+
+- Async Check Order Status API to "Check Status of Drink" in the Starbucks Database
+
+- Will need a Background Worker Job (i.e. Spring Scheduler) to pick up Orders and Make Drinks
+
+- Background Worker should be a "Single Resilient POD" which auto restarts on crashes
+  
 
 # CMPE 172 Weekly Journals
 This section is the 10 "weekly" journals of the progress I had during every journal entry.
