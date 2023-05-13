@@ -24,13 +24,13 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 - Implementation must not just use Rest Client example code (from instructor) as-is
   - Implementation of Cashier's App does not use starbucks-client
 - Support Admin Logins for Starbucks Employees (5 points)
- - Refer to journal 7 for correct implementation of registration and login
+    - Refer to journal 7 for correct implementation of registration and login
 - Must not store credentials in memory or hard code in source code
- - Refer to journal 7, dynamically create the user on registration
+    - Refer to journal 7, dynamically create the user on registration
 - Should also include New Account Registration and Logout
- - Refer to journal 7 for creation of user during runtime
+    - Refer to journal 7 for creation of user during runtime
 - Support In Store Order Processing (20 points -- See Diagram Below)
- - Refer to journal 10 for the fulfillment of the UML diagram (placing of the order to payment processing)
+    - Refer to journal 10 for the fulfillment of the UML diagram (placing of the order to payment processing)
 
 ### Scalable Cloud Deployment on GCP  (25 points)
 - External Load Balancer as Ingress for Cashier's App (10 points)
