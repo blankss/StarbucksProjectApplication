@@ -90,7 +90,7 @@ public class StarbucksService {
     }
 
     // https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
-    private HashMap<String, StarbucksOrder> orders = new HashMap<>();
+    // private HashMap<String, StarbucksOrder> orders = new HashMap<>();
 
     /* https://docs.spring.io/spring-data/jpa/docs/2.4.5/api/ */
 
@@ -102,7 +102,6 @@ public class StarbucksService {
     /* Delete All Starbucks Orders (Cleanup for Unit Testing) */
     public void deleteAllOrders() {
         ordersRepository.deleteAllInBatch();
-        orders.clear();
     }
 
     public StarbucksOrder findActive(String regid) throws ResponseStatusException {
@@ -249,7 +248,7 @@ public class StarbucksService {
         if (order != null) {
             return order;
         }
-        return orders.get(regid);
+        return order;
     }
 
     /* Clear Active Order */
@@ -296,7 +295,6 @@ public class StarbucksService {
         card.setBalance(new_balance);
         String status = "Paid with Card: " + cardnum + " Balance: $" + new_balance + ".";
         active.setStatus(status);
-        active.clear();
         cardsRepository.save(card);
         active.setCard(card);
         ordersRepository.save(active);

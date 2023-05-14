@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: starbucks-cashier-deployment
+  name: spring-cashier-deployment
   namespace: default
 spec:
   selector:
@@ -20,7 +20,7 @@ spec:
         image: blankss/spring-cashier:latest
         env:
           - name: MYSQL_HOST
-            value: ""
+            value: "10.6.176.3"
           - name: MYSQL_USERNAME
             value: "happy"
           - name: MYSQL_PASSWORD
@@ -28,8 +28,8 @@ spec:
           - name: MYSQL_SCHEMA
             value: "cashier"
           - name: API_HOST
-            value: "<API_HOST>" 
+            value: "34.172.21.123:80/api/" 
           - name: API_KEY
-            value: "default"
+            value: "2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ"
         ports:
         - containerPort: 8085

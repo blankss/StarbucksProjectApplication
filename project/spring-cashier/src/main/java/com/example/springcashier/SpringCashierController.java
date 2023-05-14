@@ -134,6 +134,7 @@ public class SpringCashierController {
                 message = "Starbucks Reserved Order" + "\n\n" +
                     "Register: " + command.getRegister() + "\n" +
                     "Status:   " + "Active Order Exists"+ "\n" ;
+                // message = e.getMessage();
             }
         }
         else if ( action.equals("Get Order") ) {
@@ -142,7 +143,8 @@ public class SpringCashierController {
             // get response as string
             try {
                 ResponseEntity<String> stringResponse = restTemplate.getForEntity(resourceUrl, String.class);
-                message = stringResponse.getBody();
+                message = format(stringResponse.getBody());
+                message = message.replaceAll(",", "\n");
             }
             catch (Exception e) {
                 message = "Starbucks Reserved Order" + "\n\n" +

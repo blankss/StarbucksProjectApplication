@@ -20,14 +20,16 @@ spec:
         image: blankss/starbucks-worker:latest
         env:
           - name: MYSQL_HOST
-            value: ""
+            value: "10.6.176.3"
           - name: MYSQL_USERNAME
             value: "root"
           - name: MYSQL_PASSWORD
             value: "cmpe172"
           - name: RABBIT_HOST
+            value: "10.104.12.126"
+          - name: RABBIT_USERNAME
             value: "guest"
           - name: RABBIT_PASSWORD
             value: "guest" 
         ports:
-        - containerPort: 8085
+        - containerPort: 8090

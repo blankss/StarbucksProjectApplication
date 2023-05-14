@@ -17,8 +17,16 @@ cashier-nodejs-run:
 
 starbucks-app-run: 
 	java -cp starbucks-app.jar \
-		-Dapiurl="http://localhost:80/api" \
+		-Dapiurl="http://34.172.21.123:80/api/" \
 		-Dapikey="2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ" \
 		-Dregister="5012349" \
 		starbucks.Main 2>debug.log
+
+# docker build --platform=linux/amd64 -t blankss/spring-starbucks-api:v3.1 .
+# docker build --platform=linux/amd64 -t blankss/spring-cashier:latest .
+# docker build --platform=linux/amd64 -t blankss/starbucks-worker:latest .
+
+# docker push blankss/spring-starbucks-api:v3.1
+# docker push blankss/spring-cashier:latest
+# docker push blankss/starbucks-worker:latest
 
