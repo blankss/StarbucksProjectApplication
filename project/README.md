@@ -3,7 +3,23 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 
 ## Screenshots
 ### Cashier
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 26 21 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/c59613e1-06af-4b5e-bdc4-e57c30207c88">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 26 41 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/af50a7c3-214f-4488-82e5-8fc2c03a3e64">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 31 43 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/ed486ffb-bc90-49e4-a7c3-5679c279919a">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 31 52 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/e81a80e5-d09d-4290-9413-b3fdeb998066">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 32 09 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/1bd0301a-5354-402b-969e-d73d2e26afc2">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 33 29 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/103eb82f-fd8c-4a22-af7d-5e4ef0bc8691">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 33 47 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/6f70778e-907f-488b-aeae-8ebb1b479d11">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 34 06 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/6237c972-101d-4510-bf88-99f6ae5a89b8">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 34 32 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/4dac9ec9-6a93-4bac-9a46-3078144833ff">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 34 54 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/24415b42-39ba-49fd-baff-38a5df844977">
+
 ### Starbucks API
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 41 36 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/3460c70a-5a88-4df3-8813-f73989c2f21a">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 41 55 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/d4a3ed9a-221c-4745-aef5-92ed6c143a1e">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 42 06 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/1a289211-acd3-4626-ac88-29a3c7c76ec8">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 42 21 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/0d414b7c-7d43-41bf-bde1-c503ce78f82f">
+
 ### Cloud Deployments
 1. Design Notes on GitHub an Architecture Diagram of the overall Deployment.
 2. How does your Solution Scale? Can it handle > 1 Million Mobile Devices? Explain. <br />
@@ -55,14 +71,21 @@ This section addresses the discussion and questions in the GKE demo assignment. 
 
 ### Starbucks API for Mobile App and Store Front (25 points)
 - Deployed with Kong API Gateway with API Key Authentication (10 points)
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 23 34 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/69807fd1-a54f-49c3-b033-5ad25558d0ff">
 
 - Implement RabbitMQ Check Order Status for "Drinks Available" (15 Points)
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 41 36 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/9611ae80-d168-4505-ac89-12ec7d8660d0">
 
 - Async Request API to "Make the Drink" once Order has been Paid (i.e. put request into a Queue)
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 42 06 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/7d64d532-15e7-454a-ac8d-0fb5b2a674e8">
 
 - Async Check Order Status API to "Check Status of Drink" in the Starbucks Database
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 41 55 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/38daba92-a7b2-4ffa-a6c3-175e3eaadcc8">
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 42 21 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/e7fade98-4c1d-49b5-afe0-c40bfdfe6eee">
 
 - Will need a Background Worker Job (i.e. Spring Scheduler) to pick up Orders and Make Drinks
+<img width="1440" alt="Screen Shot 2023-05-13 at 5 56 14 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/28c2fc9b-0ed7-474f-972c-6314df5ae9fd">
+    - Refer to previous screenshots to see Worker and RabbitMQ change the status of drink by picking up order
 
 - Background Worker should be a "Single Resilient POD" which auto restarts on crashes
   
