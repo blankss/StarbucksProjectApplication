@@ -1,7 +1,14 @@
 # CMPE 172 Project Journal
-This section addresses the discussion and questions in the GKE demo assignment. Basically, this section is reserved for the discussion of the final product deployed on GKE.
+This section addresses the discussion and questions in the GKE demo assignment. Basically, this section is reserved for the discussion of the final product deployed on GKE. Please scroll down for the weekly journals.
 
 ## Screenshots
+**NOTE:** Please see demo for a further demonstration as screenshots do not capture the full display of the functionalities of the app on GKE.
+
+During the demo, I have forgotten to complete step 11 of showing the GKE pod logs for the worker, here are the screenshots of the pods of the 2 workers I had that demonstrated the that the workers received the order and made the drink.
+
+<img width="1440" alt="Screen Shot 2023-05-13 at 8 34 09 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/68010ddf-2665-482d-9eda-f8bdc724108c">
+<img width="1440" alt="Screen Shot 2023-05-13 at 8 34 40 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/db7a70fd-e981-4c7e-b074-857c977e8230">
+
 ### Cashier
 <img width="1440" alt="Screen Shot 2023-05-13 at 5 26 21 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/c59613e1-06af-4b5e-bdc4-e57c30207c88">
 <img width="1440" alt="Screen Shot 2023-05-13 at 5 26 41 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/af50a7c3-214f-4488-82e5-8fc2c03a3e64">
@@ -88,6 +95,9 @@ This section addresses the discussion and questions in the GKE demo assignment. 
     - Refer to previous screenshots to see Worker and RabbitMQ change the status of drink by picking up order
 
 - Background Worker should be a "Single Resilient POD" which auto restarts on crashes
+<img width="1440" alt="Screen Shot 2023-05-13 at 8 35 01 PM" src="https://github.com/nguyensjsu/cmpe172-blankss/assets/72158949/2aabdc23-1c87-4fa6-8241-a66cc49bc228">
+    - Here, we can see that the pod has some restarts, but ultimately still green.
+
   
 
 # CMPE 172 Weekly Journals
