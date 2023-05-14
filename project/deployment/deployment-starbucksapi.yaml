@@ -20,16 +20,16 @@ spec:
         image: blankss/spring-starbucks-api:v3.1 
         env:
           - name: MYSQL_HOST
-            value: "10.6.176.3"
+            value: "<MYSQL_HOST>"
           - name: MYSQL_USERNAME
-            value: "root"
+            value: "<MYSQL_USER>"
           - name: MYSQL_PASSWORD
-            value: "cmpe172"
+            value: "<MYSQL_PASS>"
           - name: RABBIT_HOST
-            value: "10.104.12.126"
+            value: "<RABBIT_HOST>"
           - name: RABBIT_USERNAME
-            value: "guest"
+            value: "<RABBIT_USER>"
           - name: RABBIT_PASSWORD
-            value: "guest"
+            value: "<RABBIT_PASS>"
         ports:
         - containerPort: 8080

@@ -20,16 +20,16 @@ spec:
         image: blankss/spring-cashier:latest
         env:
           - name: MYSQL_HOST
-            value: "10.6.176.3"
+            value: "<MYSQL_HOST>"
           - name: MYSQL_USERNAME
-            value: "happy"
+            value: "<MYSQL_USER>"
           - name: MYSQL_PASSWORD
-            value: "camper"
+            value: "<MYSQL_PASS>"
           - name: MYSQL_SCHEMA
-            value: "cashier"
+            value: "<MYSQL_SCHEMA>"
           - name: API_HOST
-            value: "34.172.21.123:80/api/" 
+            value: "<KONG_API>" 
           - name: API_KEY
-            value: "2H3fONTa8ugl1IcVS7CjLPnPIS2Hp9dJ"
+            value: "<API_KEY>"
         ports:
         - containerPort: 8085
